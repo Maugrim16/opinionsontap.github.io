@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Opinions on Tap — Pub Life Apparel Brand</title>
+  <meta name="description" content="Get in touch with Opinions on Tap. Questions, collabs, design suggestions or just want to share your pint of view. Pub life apparel designed in Australia." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://opinionsontap.com/contact.html" />
+  <meta property="og:title" content="Contact — Opinions on Tap" />
+  <meta property="og:description" content="Got a pint of view? We'd like to hear it. Get in touch with Opinions on Tap." />
+  <meta property="og:image" content="https://opinionsontap.com/assets/amalfi-bg.jpg" />
+  <meta property="og:site_name" content="Opinions on Tap" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Opinions on Tap" />
+  <meta name="twitter:description" content="Got a pint of view? We'd like to hear it." />
+  <meta name="twitter:image" content="https://opinionsontap.com/assets/amalfi-bg.jpg" />
+  <link rel="canonical" href="https://opinionsontap.com/contact.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ============================
+       CONTACT — PAGE STYLES
+       ============================ */
+
+    .contact-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .contact-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/amalfi-bg.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      z-index: 0;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(10, 7, 2, 0.78) 0%,
+        rgba(10, 7, 2, 0.65) 50%,
+        rgba(10, 7, 2, 0.35) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .contact-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 160px 24px 100px;
+      max-width: 780px;
+    }
+
+    .contact-hero-inner h1 {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      color: var(--off-white);
+    }
+
+    .contact-hero-inner p {
+      font-size: 1.1rem;
+      color: var(--text-body);
+      opacity: 0.8;
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    /* Contact options section */
+    .contact-section {
+      background: var(--warm-dark);
+      padding: var(--section-pad);
+      position: relative;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23C9A84C' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .contact-card {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 2px;
+      padding: 36px 32px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(201,168,76,0.35);
+      background: rgba(201,168,76,0.08);
+    }
+
+    .contact-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .contact-card-label {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .contact-card h3 {
+      font-family: var(--font-slab);
+      font-size: 1.3rem;
+      color: var(--off-white);
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      opacity: 0.7;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* Social links row */
+    .contact-social-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .contact-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 10px 20px;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .contact-social-btn:hover {
+      background: rgba(201,168,76,0.1);
+      border-color: var(--gold);
+    }
+
+    /* Response note */
+    .contact-note {
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-note-line {
+      width: 32px;
+      height: 1px;
+      background: var(--gold-dark);
+      flex-shrink: 0;
+    }
+
+    .contact-note p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      opacity: 0.6;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* Amazon note */
+    .contact-amazon {
+      background: var(--black);
+      padding: 64px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .contact-amazon-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .contact-amazon p {
+      font-size: 1rem;
+      color: var(--text-body);
+      opacity: 0.65;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-social-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Opinions on Tap" />
+      <span class="nav-logo-text">Opinions on Tap</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="the-tap/index.html">The Tap</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="shop.html" class="btn btn-primary">Shop</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-inner">
+      <h1 class="fade-up">Got a pint of view?<br>We'd like to hear it.</h1>
+      <p class="fade-up delay-2">
+        Questions, collabs, design suggestions, or just want to tell us about a view worth putting in a glass — get in touch.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- CONTACT OPTIONS -->
+  <section class="contact-section">
+    <div class="contact-inner">
+      <p class="concept-label">Get In Touch</p>
+
+      <div class="contact-grid">
+
+        <!-- Email -->
+        <div class="contact-card">
+          <span class="contact-card-icon">✉️</span>
+          <p class="contact-card-label">Email</p>
+          <h3>Drop us a line</h3>
+          <p>For general questions, brand enquiries, or anything else. We read everything.</p>
+          <a href="mailto:hello@opinionsontap.com" class="contact-link">
+            hello@opinionsontap.com
+          </a>
+        </div>
+
+        <!-- Social -->
+        <div class="contact-card">
+          <span class="contact-card-icon">📱</span>
+          <p class="contact-card-label">Social</p>
+          <h3>Follow along</h3>
+          <p>New designs, new views, and the occasional opinion on Instagram and Facebook.</p>
+          <div class="contact-social-row">
+            <a href="#" class="contact-social-btn">📷 Instagram</a>
+            <a href="#" class="contact-social-btn">📘 Facebook</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="contact-note">
+        <div class="contact-note-line"></div>
+        <p>We'll get back to you within 48 hours. Usually faster — we're not that busy yet.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- AMAZON NOTE -->
+  <section class="contact-amazon">
+    <div class="contact-amazon-inner">
+      <p class="concept-label" style="text-align:center; margin-bottom: 20px;">Order Issues?</p>
+      <p>
+        All shirts are printed and shipped by Amazon. For questions about your order, delivery, or returns — Amazon's support team is the fastest way to get it sorted.
+      </p>
+      <a href="https://www.amazon.com/dp/B0GVDLPWSC" target="_blank" rel="noopener" class="btn btn-outline">
+        Visit Our Amazon Store
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
+        <p class="footer-tagline">It's My Pint of View</p>
+        <p class="footer-desc">Pub life gear for people with opinions. Designed in Australia. Shipped worldwide via Amazon.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      <li><a href="the-tap/index.html">The Tap</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/opinions.on.tap/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Opinions on Tap. All rights reserved.</span>
+      <span>opinionsontap.com</span>
+    </div>
+  </footer>
+
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+</body>
+</html>

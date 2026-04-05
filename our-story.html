@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — Pub Life Brand | Opinions on Tap</title>
+  <meta name="description" content="Opinions on Tap is a pub life brand built around one idea — the pint glass as a lens on the world. Every great opinion starts with a good view." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://opinionsontap.com/our-story.html" />
+  <meta property="og:title" content="Our Story — Opinions on Tap" />
+  <meta property="og:description" content="The pint glass is our way of framing it. Every design puts a real place or moment inside a pint glass." />
+  <meta property="og:image" content="https://opinionsontap.com/assets/12a-shot.jpg" />
+  <meta property="og:site_name" content="Opinions on Tap" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Story — Opinions on Tap" />
+  <meta name="twitter:description" content="Opinions on Tap is a pub life brand built around one idea — the pint glass as a lens on the world." />
+  <meta name="twitter:image" content="https://opinionsontap.com/assets/12a-shot.jpg" />
+  <link rel="canonical" href="https://opinionsontap.com/our-story.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ============================
+       OUR STORY — PAGE STYLES
+       ============================ */
+
+    /* Hero */
+    .story-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .story-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/reef-bg.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      z-index: 0;
+    }
+
+    .story-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(10, 7, 2, 0.78) 0%,
+        rgba(10, 7, 2, 0.68) 50%,
+        rgba(10, 7, 2, 0.40) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .story-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 160px 24px 100px;
+      max-width: 780px;
+    }
+
+    .story-hero-inner h1 {
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 28px;
+      color: var(--off-white);
+    }
+
+    .story-hero-inner .explainer {
+      font-size: 1.15rem;
+      color: var(--text-body);
+      opacity: 0.8;
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    /* The Idea section */
+    .story-idea {
+      background: var(--warm-dark);
+      padding: var(--section-pad);
+      position: relative;
+    }
+
+    .story-idea::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23C9A84C' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .story-idea-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .story-idea-inner .concept-label {
+      margin-bottom: 32px;
+    }
+
+    .story-body {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: var(--text-body);
+    }
+
+    .story-body p {
+      opacity: 0.85;
+    }
+
+    .story-body p + p {
+      margin-top: 28px;
+    }
+
+    .story-body .highlight {
+      color: var(--off-white);
+      opacity: 1;
+      font-style: italic;
+    }
+
+    /* Photo break */
+    .story-photo-break {
+      width: 100%;
+      height: 55vh;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-photo-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+
+    .story-photo-break::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,7,2,0.4) 0%,
+        rgba(10,7,2,0.1) 40%,
+        rgba(10,7,2,0.1) 60%,
+        rgba(10,7,2,0.5) 100%
+      );
+    }
+
+    .story-photo-caption {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      font-family: var(--font-script);
+      font-size: 1.6rem;
+      color: var(--off-white);
+      white-space: nowrap;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    }
+
+    /* The Series section */
+    .story-series {
+      background: var(--black);
+      padding: var(--section-pad);
+    }
+
+    .story-series-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .story-series-inner .concept-label {
+      margin-bottom: 32px;
+    }
+
+    .series-closer {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .series-closer span {
+      font-family: var(--font-slab);
+      font-size: 1.1rem;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+
+    /* CTA section */
+    .story-cta {
+      background: var(--warm-dark);
+      padding: 100px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .story-cta h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: 32px;
+      color: var(--off-white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Opinions on Tap" />
+      <span class="nav-logo-text">Opinions on Tap</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="the-tap/index.html">The Tap</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="shop.html" class="btn btn-primary">Shop</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="story-hero">
+    <div class="story-hero-inner">
+      <h1 class="fade-up">Every great opinion starts with a good view.</h1>
+      <p class="explainer fade-up delay-2">
+        Opinions on Tap is a pub life brand built around one idea — the pint glass as a lens on the world.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- THE IDEA -->
+  <section class="story-idea">
+    <div class="container story-idea-inner">
+      <p class="concept-label">The Idea</p>
+      <div class="story-body">
+        <p>
+          There's something about a pub that makes people honest.
+        </p>
+        <p>
+          Not the alcohol — the atmosphere. The fact that everyone's sitting down, no one's in a hurry, and the conversation has room to go somewhere.
+        </p>
+        <p>
+          That's what Opinions on Tap is about. The pint glass is our way of framing it. When you're holding one, you're not rushing. You're looking around. You've got a point of view.
+        </p>
+        <p class="highlight">
+          We took that idea literally. Every design puts a real place or moment inside a pint glass. A coastline. A course. A view worth stopping for. Because the best views and the best opinions tend to show up at the same time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PHOTO BREAK -->
+  <div class="story-photo-break">
+    <img src="assets/12a-shot.jpg" alt="The Twelve Apostles, Great Ocean Road" />
+    <span class="story-photo-caption">The Twelve Apostles — Design 01</span>
+  </div>
+
+
+  <!-- THE SERIES -->
+  <section class="story-series">
+    <div class="story-series-inner">
+      <p class="concept-label">The Series</p>
+      <div class="story-body">
+        <p>
+          The Pint of View series starts in Australia.
+        </p>
+        <p>
+          Each shirt captures something worth raising a glass to — real locations, great courses, iconic coastlines, places and moments that mean something to the people who've been there.
+        </p>
+      </div>
+      <div class="series-closer">
+        <span>The series grows.</span>
+        <span>The views change.</span>
+        <span>The pint stays cold.</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="story-cta">
+    <h2>Find your view.</h2>
+    <a href="shop.html" class="btn btn-primary">Shop the Collection</a>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
+        <p class="footer-tagline">It's My Pint of View</p>
+        <p class="footer-desc">Pub life gear for people with opinions. Designed in Australia. Shipped worldwide via Amazon.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      <li><a href="the-tap/index.html">The Tap</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/opinions.on.tap/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Opinions on Tap. All rights reserved.</span>
+      <span>opinionsontap.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+</body>
+</html>
