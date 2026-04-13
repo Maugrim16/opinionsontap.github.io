@@ -1,0 +1,257 @@
+<!-- POST_META
+title: The Unwritten Rules of the Lineup
+date: 15 May 2026
+tag: Surf
+excerpt: Surfing has no rulebook. It has something worse — everyone knows the rules and nobody wrote them down.
+card_image: surf-card.jpg
+card_alt: Surfers waiting in the lineup at dawn
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Unwritten Rules of the Lineup | Surf | Opinions on Tap</title>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://opinionsontap.com/the-tap/the-unwritten-rules-of-the-lineup.html" />
+  <meta property="og:title" content="The Unwritten Rules of the Lineup" />
+  <meta property="og:description" content="Surfing has no rulebook. It has something worse — everyone knows the rules and nobody wrote them down." />
+  <meta property="og:image" content="https://opinionsontap.com/assets/surf-bg.jpg" />
+  <meta property="og:site_name" content="Opinions on Tap" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Unwritten Rules of the Lineup" />
+  <meta name="twitter:description" content="Surfing has no rulebook. It has something worse — everyone knows the rules and nobody wrote them down." />
+  <meta name="twitter:image" content="https://opinionsontap.com/assets/surf-bg.jpg" />
+  <link rel="canonical" href="https://opinionsontap.com/the-tap/the-unwritten-rules-of-the-lineup.html" />
+  <meta name="description" content="Surfing has no rulebook. It has something worse. A dry guide to the unwritten code of the lineup — who has right of way, what drop-in actually means, and why locals are the way they are." />
+  <meta name="publish-date" content="2026-05-15" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .post-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .post-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('../assets/surf-bg.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      z-index: 0;
+    }
+    .post-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,7,2,0.97) 0%, rgba(10,7,2,0.6) 50%, rgba(10,7,2,0.25) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .post-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px 72px;
+      width: 100%;
+    }
+    .post-back {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      padding-top: 120px;
+      display: block;
+      margin-bottom: 32px;
+      transition: opacity 0.2s;
+    }
+    .post-back:hover { opacity: 1; }
+    .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .post-tag {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.15);
+      padding: 4px 12px;
+      border-radius: 2px;
+    }
+    .post-date { font-size: 0.85rem; color: var(--text-body); opacity: 0.45; }
+    .post-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.8rem);
+      line-height: 1.08;
+      color: var(--off-white);
+      max-width: 780px;
+      margin-bottom: 20px;
+    }
+    .post-intro { font-size: 1.15rem; color: var(--text-body); opacity: 0.75; line-height: 1.75; max-width: 620px; }
+    .post-body { background: var(--black); padding: 72px 24px 100px; }
+    .post-body-inner { max-width: 720px; margin: 0 auto; }
+    .post-content { font-size: 1.08rem; line-height: 1.9; color: var(--text-body); }
+    .post-content p { opacity: 0.82; margin-bottom: 28px; }
+    .post-content h2 { font-family: var(--font-slab); font-size: 1.6rem; color: var(--off-white); margin: 52px 0 20px; line-height: 1.2; }
+    .post-content h3 { font-family: var(--font-slab); font-size: 1.2rem; color: var(--gold); margin: 36px 0 12px; }
+    .post-content blockquote { border-left: 3px solid var(--gold); padding: 4px 0 4px 28px; margin: 40px 0; }
+    .post-content blockquote p { font-family: var(--font-script); font-size: 1.5rem; color: var(--off-white); opacity: 1; line-height: 1.5; margin: 0; }
+    .post-divider { display: flex; align-items: center; gap: 16px; margin: 52px 0; }
+    .post-divider::before, .post-divider::after { content: ''; flex: 1; height: 1px; background: rgba(201,168,76,0.15); }
+    .post-divider span { color: var(--gold); font-size: 1rem; opacity: 0.6; }
+    .post-cta { margin-top: 64px; padding: 48px 40px; background: var(--warm-dark); border: 1px solid rgba(201,168,76,0.15); border-radius: 2px; text-align: center; }
+    .post-cta h3 { font-family: var(--font-slab); font-size: 1.5rem; color: var(--off-white); margin-bottom: 12px; }
+    .post-cta p { font-size: 0.95rem; color: var(--text-body); opacity: 0.65; margin-bottom: 28px; line-height: 1.65; }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/logo.png" alt="Opinions on Tap" />
+      <span class="nav-logo-text">Opinions on Tap</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../our-story.html">Our Story</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="index.html">The Tap</a></li>
+    </ul>
+    <div class="nav-cta"><a href="../shop.html" class="btn btn-primary">Shop</a></div>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <a href="index.html" class="post-back">← The Tap</a>
+      <div class="post-meta">
+        <span class="post-tag">Surf</span>
+        <span class="post-date">15 May 2026</span>
+      </div>
+      <h1>The Unwritten Rules of the Lineup</h1>
+      <p class="post-intro">Surfing has no rulebook. It has something worse — everyone knows the rules and nobody wrote them down. A guide to the code that runs the water.</p>
+    </div>
+  </section>
+
+  <section class="post-body">
+    <div class="post-body-inner">
+      <div class="post-content">
+
+        <p>If you show up to a surf break for the first time and ask someone to explain the rules, they'll look at you the way people look at someone who asks what fork to use at a dinner party. Faint disbelief. A quick assessment of whether you're serious. Then a vague gesture in the direction of the water.</p>
+
+        <p>The rules are not explained. They are absorbed over time, through observation and the occasional incident. Breaking them is how most people find out they exist.</p>
+
+        <p>This is not an accident. The lineup has operated this way for as long as there have been surfers sharing breaks, which traces back to ancient Hawaii and has been refined, argued over, and occasionally enforced with varying degrees of patience ever since.</p>
+
+        <h2>What the lineup actually is</h2>
+
+        <p>The lineup is where surfers wait for waves. It sits beyond the breaking point, usually far enough out that the white water doesn't reach you. You paddle out, you find where everyone else is sitting, and you join the queue.</p>
+
+        <p>That word — queue — is where it starts to get complicated. Because the lineup is a queue that moves, reforms, has no visible markings, and is managed entirely through a social contract that nobody signs and everyone is expected to honor.</p>
+
+        <p>It works, most of the time, because people who surf want to keep surfing. Breaking the code means the session gets worse for everyone including yourself. The water is the enforcer.</p>
+
+        <blockquote><p>The ocean doesn't care who you are. The locals might.</p></blockquote>
+
+        <h2>The rules nobody told you</h2>
+
+        <h3>Don't drop in</h3>
+
+        <p>The surfer closest to the peak of the wave has right of way. Always. If someone is already up and riding and you take off on the same wave in front of them, you have dropped in. This is the cardinal offense. The equivalent, on land, of cutting in front of someone at the bar who has been waiting longer than you, taking their drink, and then acting confused when they're annoyed.</p>
+
+        <p>New surfers do this constantly, usually because they couldn't see the other person from their position, or didn't know the rule, or misjudged the wave. Experienced surfers do it occasionally on purpose. Neither version is well received.</p>
+
+        <h3>Don't snake</h3>
+
+        <p>Snaking is when you repeatedly paddle around other surfers to get yourself closer to the peak, effectively jumping the queue over and over. It looks like positioning. It is cutting. Everyone in the water can see it. The person being snaked can always tell. There is a reasonable amount of time before consequences occur, but they do occur.</p>
+
+        <h3>Respect the locals</h3>
+
+        <p>This one is more complicated and generates more debate. The principle is that people who surf a break regularly have deeper knowledge of it — how the wave breaks, where to sit, what the tide does — and have earned some priority through time and familiarity. They are not entitled to every wave. They are not owed deference from visitors as some divine right. But treating a local break like a tourist attraction and ignoring that other people have a relationship with it is a reliable way to have a bad session.</p>
+
+        <p>The easier version of this rule: be a reasonable guest. Most locals respond well to people who are clearly trying to fit in rather than dominate.</p>
+
+        <h3>Call your wave</h3>
+
+        <p>When a wave breaks both left and right and you're going one direction, you say which. "Left" or "right." Out loud. This tells the person on the other side that you're not colliding with them. It takes less than a second and prevents the kind of incident that ruins a morning for multiple people. It is, somehow, still not universal.</p>
+
+        <h3>Don't ditch your board</h3>
+
+        <p>Your board, pushed forward by a wave you bailed on, is a large object moving fast through water where other people are swimming. Hold on or kick it away from others. This is less etiquette and more basic physics, but the lineup has opinions about it all the same.</p>
+
+        <h2>The local situation, honestly</h2>
+
+        <p>Localism — the idea that regular surfers at a break have authority over who gets waves and who doesn't — gets a bad reputation, some of it earned. There are breaks where visitors are genuinely made to feel unwelcome, and that's not something worth defending.</p>
+
+        <p>But most localism is less dramatic than the stories. It's more like the dynamic at a regular pub where the regulars have their spots and their rhythms and a newcomer who walks in and tries to rearrange the furniture will get some looks. You don't have to leave. You do have to read the room.</p>
+
+        <p>Show up, be patient, take your turn, don't hog waves, learn the break before you charge it. Most line-ups open up fairly quickly to people who approach them that way.</p>
+
+        <h2>After the session</h2>
+
+        <p>Here is the thing about all of these rules, unwritten as they are. The session ends. Boards go under arms. People walk up the beach. And the incident in the water — the drop-in, the snake, the argument about whose wave that was — almost always gets resolved or forgotten over whatever comes next.</p>
+
+        <p>A cold drink. A conversation about the set that came through at nine. The wave someone made that nobody thought was makeable. The wipeout that definitely happened and will be discussed with embellishments for years.</p>
+
+        <p>The lineup has rules because the session matters. But the session ends, and the debrief is where the morning actually gets processed. The rules are for the water. After that, it's just people who got up early to do something they love, talking about it.</p>
+
+        <div class="post-divider"><span>★</span></div>
+
+        <p>The rules are unwritten because surfers have always understood that the best code is the one everyone already knows. You don't need it on paper if it's in the water.</p>
+
+        <p>Show up. Wait your turn. Ride the wave. That's a pint of view worth paddling out for.</p>
+
+      </div>
+
+      <div class="post-cta">
+        <h3>For the surfer who lives for the session.</h3>
+        <p>The surf series from Opinions on Tap. Premium pub life apparel for the lineup, the beach, and the cold one after.</p>
+        <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3APint%2Bof%2BView%2Bby%2BOpinions%2Bon%2BTap" target="_blank" rel="noopener" class="btn btn-primary">Shop the Surf Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
+        <p class="footer-tagline">It's My Pint of View</p>
+        <p class="footer-desc">Pub life gear for people with opinions. Designed in Australia. Shipped worldwide via Amazon.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../our-story.html">Our Story</a></li>
+          <li><a href="../shop.html">Shop</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">The Tap</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/opinionsontapofficial/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Opinions on Tap. All rights reserved.</span>
+      <span>opinionsontap.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+  </script>
+</body>
+</html>
