@@ -168,6 +168,9 @@ def rebuild_index(posts):
     .tap-hero-inner h1 span {{ color: var(--gold); }}
     .tap-hero-inner p {{ font-size: 1.1rem; color: var(--text-body); opacity: 0.7; max-width: 480px; line-height: 1.7; }}
     .tap-posts {{ background: var(--black); padding: var(--section-pad); }}
+    .tap-intro {{ background: var(--warm-dark); border-bottom: 1px solid rgba(201,168,76,0.1); padding: 48px 24px; }}
+    .tap-intro-inner {{ max-width: 760px; margin: 0 auto; }}
+    .tap-intro-inner p {{ font-size: 1.05rem; color: var(--text-body); opacity: 0.75; line-height: 1.8; }}
     .tap-posts-inner {{ max-width: var(--max-width); margin: 0 auto; }}
     .tap-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }}
     .tap-card {{ background: var(--warm-dark); border: 1px solid rgba(201,168,76,0.1); border-radius: 2px; overflow: hidden; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }}
@@ -179,7 +182,7 @@ def rebuild_index(posts):
     .tap-card-meta {{ display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }}
     .tap-card-tag {{ font-family: var(--font-body); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,0.1); padding: 4px 10px; border-radius: 2px; }}
     .tap-card-date {{ font-size: 0.8rem; color: var(--text-body); opacity: 0.4; }}
-    .tap-card h2 {{ font-size: 1.2rem; line-height: 1.3; margin-bottom: 12px; color: var(--off-white); }}
+    .tap-card h2 {{ font-size: 1.2rem; line-height: 1.3; margin-bottom: 12px; color: var(--off-white); font-family: var(--font-body); font-weight: 700; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }}
     .tap-card h2 a {{ color: inherit; transition: color 0.2s; }}
     .tap-card h2 a:hover {{ color: var(--gold); }}
     .tap-card-excerpt {{ font-size: 0.9rem; color: var(--text-body); opacity: 0.65; line-height: 1.7; flex: 1; margin-bottom: 20px; }}
@@ -226,6 +229,12 @@ def rebuild_index(posts):
     </div>
   </section>
 
+  <section class="tap-intro">
+    <div class="tap-intro-inner">
+      <p>The Tap covers pub culture, travel, golf, fishing and the kind of opinions that come out after the second round. Stories about the road, the fairway, the water and the bar. Written for people who wear their experience rather than talk about it.</p>
+    </div>
+  </section>
+
   <section class="tap-posts">
     <div class="tap-posts-inner">
       <div class="tap-grid">
@@ -254,7 +263,7 @@ def rebuild_index(posts):
       <div class="footer-social">
         <h4>Follow Along</h4>
         <div class="social-links">
-          <a href="https://www.instagram.com/opinions.on.tap/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.instagram.com/opinionsontapofficial/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
           <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
         </div>
       </div>
