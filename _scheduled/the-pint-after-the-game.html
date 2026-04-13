@@ -1,0 +1,290 @@
+<!-- POST_META
+title: The Pint After the Game
+date: 28 May 2026
+tag: The Culture
+excerpt: You played. You coached. Your son won. At some point the roles blur and it's just two people who understand what happened on a field, having a drink.
+card_image: pub-card.jpg
+card_alt: Two pints on a wooden table at a pub
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pint After the Game | The Culture | Opinions on Tap</title>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://opinionsontap.com/the-tap/the-pint-after-the-game.html" />
+  <meta property="og:title" content="The Pint After the Game" />
+  <meta property="og:description" content="You played. You coached. Your son won. At some point the roles blur and it's just two people who understand what happened on a field, having a drink." />
+  <meta property="og:image" content="https://opinionsontap.com/assets/pub-card.jpg" />
+  <meta property="og:site_name" content="Opinions on Tap" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Pint After the Game" />
+  <meta name="twitter:description" content="You played. You coached. Your son won. At some point the roles blur and it's just two people who understand what happened on a field, having a drink." />
+  <meta name="twitter:image" content="https://opinionsontap.com/assets/pub-card.jpg" />
+  <link rel="canonical" href="https://opinionsontap.com/the-tap/the-pint-after-the-game.html" />
+  <meta name="description" content="You played. You coached. Your son won something you never quite got to finish. At some point the pint after the game becomes something different — and you don't need many words to know it." />
+  <meta name="publish-date" content="2026-05-28" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .post-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .post-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('../assets/Pintafter_bg.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      z-index: 0;
+    }
+    .post-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,7,2,0.97) 0%, rgba(10,7,2,0.6) 50%, rgba(10,7,2,0.25) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .post-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px 72px;
+      width: 100%;
+    }
+    .post-back {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      padding-top: 120px;
+      display: block;
+      margin-bottom: 32px;
+      transition: opacity 0.2s;
+    }
+    .post-back:hover { opacity: 1; }
+    .post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .post-tag {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.15);
+      padding: 4px 12px;
+      border-radius: 2px;
+    }
+    .post-date { font-size: 0.85rem; color: var(--text-body); opacity: 0.45; }
+    .post-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.8rem);
+      line-height: 1.08;
+      color: var(--off-white);
+      max-width: 780px;
+      margin-bottom: 20px;
+    }
+    .post-intro {
+      font-size: 1.15rem;
+      color: var(--text-body);
+      opacity: 0.75;
+      line-height: 1.75;
+      max-width: 620px;
+    }
+    .post-body { background: var(--black); padding: 72px 24px 100px; }
+    .post-body-inner { max-width: 720px; margin: 0 auto; }
+    .post-content { font-size: 1.08rem; line-height: 1.9; color: var(--text-body); }
+    .post-content p { opacity: 0.82; margin-bottom: 28px; }
+    .post-content h2 {
+      font-family: var(--font-slab);
+      font-size: 1.6rem;
+      color: var(--off-white);
+      margin: 52px 0 20px;
+      line-height: 1.2;
+    }
+    .post-content blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 28px;
+      margin: 40px 0;
+    }
+    .post-content blockquote p {
+      font-family: var(--font-script);
+      font-size: 1.5rem;
+      color: var(--off-white);
+      opacity: 1;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .post-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 52px 0;
+    }
+    .post-divider::before, .post-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(201,168,76,0.15);
+    }
+    .post-divider span { color: var(--gold); font-size: 1rem; opacity: 0.6; }
+    .post-cta {
+      margin-top: 64px;
+      padding: 48px 40px;
+      background: var(--warm-dark);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 2px;
+      text-align: center;
+    }
+    .post-cta h3 { font-family: var(--font-slab); font-size: 1.5rem; color: var(--off-white); margin-bottom: 12px; }
+    .post-cta p { font-size: 0.95rem; color: var(--text-body); opacity: 0.65; margin-bottom: 28px; line-height: 1.65; }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="mainNav">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/logo.png" alt="Opinions on Tap" />
+      <span class="nav-logo-text">Opinions on Tap</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../our-story.html">Our Story</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="index.html">The Tap</a></li>
+    </ul>
+    <div class="nav-cta"><a href="../shop.html" class="btn btn-primary">Shop</a></div>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="post-hero">
+    <div class="post-hero-inner">
+      <a href="index.html" class="post-back">← The Tap</a>
+      <div class="post-meta">
+        <span class="post-tag">The Culture</span>
+        <span class="post-date">28 May 2026</span>
+      </div>
+      <h1>The Pint After the Game</h1>
+      <p class="post-intro">You played. You coached. Your son won something you never quite finished yourself. At some point the roles blur and it's just two people who understand what happened on a field, having a drink.</p>
+    </div>
+  </section>
+
+  <section class="post-body">
+    <div class="post-body-inner">
+      <div class="post-content">
+
+        <p>There's a version of this story that starts with a broken femur.</p>
+
+        <p>I played rugby through school and into colts — under-19s, club level, all three grades in the same year. That year ended with a broken femur and the season finished without me. I watched the rest of it from somewhere I didn't want to be. That's how those things go sometimes. You don't get to choose when it ends.</p>
+
+        <p>The pint after the game when you've played is a particular thing. It's physical — your body is still processing what just happened, the adrenaline is still somewhere in the system, and the cold drink is doing genuine work. You're not being philosophical about it. You're just sitting down with people who were in the same thing you were in, and for a while you don't have to be anywhere else.</p>
+
+        <p>I drank a lot of those pints at the Regatta in Brisbane. Good ones and bad ones, after wins and after losses, with teammates and with the men from the other team who'd been trying to hurt you for eighty minutes and were now completely fine to have a beer with. That's sport. The game is the game. After is after.</p>
+
+        <h2>Then you start coaching</h2>
+
+        <p>The shift from player to coach is stranger than people expect. You're still at the ground every weekend, still in it, but you're on the outside of something you used to be inside. Your body isn't doing the work anymore. You're watching other people do it and trying to help them do it better.</p>
+
+        <p>I coached my son from under-6. That's a long time. Under-6 rugby is chaos with boots on — small humans running in roughly the right direction, occasionally the wrong one, with tremendous enthusiasm and very little else. You don't coach under-6s because you think you're developing elite athletes. You coach them because someone has to, and because watching a kid figure out what their body can do is worth every freezing Saturday morning.</p>
+
+        <p>That team, that original group of kids, started as one of the worst under-6 sides in the competition. By under-9 they were one of the best. Nobody made a big deal of it. It just happened, the way things happen when the same group of kids plays together long enough to start actually understanding each other.</p>
+
+        <blockquote><p>The game changes. The people you watch it with don't.</p></blockquote>
+
+        <h2>The seconds grand final</h2>
+
+        <p>My son's school seconds team went through a season undefeated. So did their opposition. The two teams met to decide the premiership — the first time the school's seconds had won one in over fifteen years.</p>
+
+        <p>The opposition had already had the premiership shirts made. They had a bye the following week and had got ahead of themselves. The game hadn't been played yet.</p>
+
+        <p>Final score: 13-12.</p>
+
+        <p>I was in the crowd with fathers I'd played alongside at the same school years before, watching our sons on the same ground. Three of the boys in that seconds team had played together since under-6. They'd been in each other's lives for over a decade by the time they ran out that afternoon. The group watching from the sideline had been accumulating all season — people who weren't there at the start who'd heard something was happening and started showing up. By the grand final there were people in that crowd who told you afterwards it was their favourite team they'd ever watched. Not because of the result. Because of what the season had been.</p>
+
+        <p>After the game, standing with those other fathers — men I'd played with, whose sons had just done something together that we'd never quite managed — almost nothing needed to be said. We knew what it was. The beer helped, but it wasn't why anyone was there.</p>
+
+        <h2>The first real pint</h2>
+
+        <p>The clearest pint I remember wasn't after the seconds grand final. It was later, after my son had moved out of school rugby and into club colts — under-20s. I'd had no involvement in that team. Hadn't coached them, hadn't managed them, hadn't been part of any of it. Just a father watching from the sideline like everyone else.</p>
+
+        <p>They won the premiership. His first year out of school, his own team, no scaffolding from anyone who knew him when he was seven.</p>
+
+        <p>The pint after that one was different because the roles had finally resolved. Not player and coach. Not father supervising a son finding his feet. Just two people who'd both been in the same thing, from different angles, for a long time. He knew what I'd played. I knew what he'd just won. We didn't need to explain either of those things to each other.</p>
+
+        <p>That's the pint that takes the longest to arrive. And it's the one that means the most when it does.</p>
+
+        <h2>What happens after that</h2>
+
+        <p>Kids grow up. That's the whole point, and also the part nobody tells you to be ready for.</p>
+
+        <p>The boys who played together from under-6 are adults now, with adult lives pulling them in adult directions. The group of fathers who stood on those sidelines for years sees each other less. The seasons end and don't restart the same way. That's just how it goes.</p>
+
+        <p>There are Saturday afternoons now when I'm at the Regatta with a pint and nobody else from that whole long run of weekends is there. Not because anything went wrong. Because everyone moved on, which is what you spend all those years hoping they'll do.</p>
+
+        <p>You sit with the pint and you think about the under-6 team that couldn't find the tryline, and the seconds who won 13-12 against a team that had already printed the shirts, and the colts final you watched alone in a crowd because your son didn't need you there anymore.</p>
+
+        <p>It's a good pint.</p>
+
+        <div class="post-divider"><span>★</span></div>
+
+        <p>The game was never really the point. The game was the reason to be somewhere with people who mattered, doing something that mattered, for long enough that it became part of who everyone was.</p>
+
+        <p>The pint after is where you figure that out. Usually years later. Usually by yourself.</p>
+
+      </div>
+
+      <div class="post-cta">
+        <h3>For the dads who stayed.</h3>
+        <p>The ones who played, coached, and watched it through. Then had a pint at the end of it.</p>
+        <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3APint%2Bof%2BView%2Bby%2BOpinions%2Bon%2BTap" target="_blank" rel="noopener" class="btn btn-primary">Dad's Pint of View</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
+        <p class="footer-tagline">It's My Pint of View</p>
+        <p class="footer-desc">Pub life gear for people with opinions. Designed in Australia. Shipped worldwide via Amazon.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../our-story.html">Our Story</a></li>
+          <li><a href="../shop.html">Shop</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">The Tap</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/opinionsontapofficial/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Opinions on Tap. All rights reserved.</span>
+      <span>opinionsontap.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+  </script>
+</body>
+</html>
