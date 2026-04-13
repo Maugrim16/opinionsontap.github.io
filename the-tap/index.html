@@ -16,8 +16,47 @@
   <meta name="twitter:description" content="Pub culture, great views, cold ones and the occasional take worth reading." />
   <meta name="twitter:image" content="https://opinionsontap.com/assets/pub-card.jpg" />
   <link rel="canonical" href="https://opinionsontap.com/the-tap/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css" />
   <style>
+
+    /* ============================================
+       TAP PAGE — SCOPED FONTS
+       Playfair Display for card headlines only.
+       Does not affect any other page.
+       ============================================ */
+
+    .tap-card h2,
+    .tap-card--hero h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: 0.012em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .tap-card-date,
+    .tap-card-subhead,
+    .tap-card-subhead-2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+    }
+
+    .tap-hero-inner h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .tap-intro-inner p {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ============================================
+       PAGE HERO
+       ============================================ */
 
     .tap-hero {
       background: var(--warm-dark);
@@ -57,12 +96,16 @@
     }
     .tap-hero-inner h1 span { color: var(--gold); }
     .tap-hero-inner p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-body);
       opacity: 0.7;
       max-width: 480px;
       line-height: 1.7;
     }
+
+    /* ============================================
+       INTRO STRIP
+       ============================================ */
 
     .tap-intro {
       background: var(--warm-dark);
@@ -74,11 +117,15 @@
       margin: 0 auto;
     }
     .tap-intro-inner p {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--text-body);
-      opacity: 0.75;
+      opacity: 0.72;
       line-height: 1.8;
     }
+
+    /* ============================================
+       POSTS SECTION
+       ============================================ */
 
     .tap-posts {
       background: var(--black);
@@ -88,140 +135,187 @@
       max-width: var(--max-width);
       margin: 0 auto;
     }
+
     .tap-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 48px;
+      gap: 24px;
+      align-items: start;
     }
-    .tap-card {
-      background: var(--warm-dark);
-      border: 1px solid rgba(201,168,76,0.1);
-      border-radius: 2px;
-      overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
+
+    /* ============================================
+       CARDS — BASE
+       ============================================ */
+
+    a.tap-card {
+      text-decoration: none;
       display: flex;
       flex-direction: column;
     }
+
+    .tap-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(201,168,76,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
     .tap-card:hover {
-      border-color: rgba(201,168,76,0.3);
+      border-color: rgba(201,168,76,0.25);
       transform: translateY(-4px);
     }
+
+    /* ============================================
+       HERO CARD — spans full width
+       ============================================ */
+
+    .tap-card--hero {
+      grid-column: span 3;
+      flex-direction: row;
+      min-height: 360px;
+      border-color: rgba(201,168,76,0.1);
+    }
+    .tap-card--hero:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201,168,76,0.3);
+    }
+    .tap-card--hero .tap-card-image {
+      width: 52%;
+      flex-shrink: 0;
+    }
+    .tap-card--hero .tap-card-body {
+      padding: 52px 56px;
+      justify-content: center;
+    }
+    .tap-card--hero h2 {
+      font-size: clamp(1.9rem, 2.8vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .tap-card--hero .tap-card-date {
+      margin-bottom: 18px;
+      font-size: 0.72rem;
+    }
+    .tap-card--hero .tap-card-subhead {
+      font-size: 1.05rem;
+      line-height: 1.55;
+      max-width: 400px;
+    }
+    .tap-card--hero .tap-card-subhead-2 {
+      font-size: 0.95rem;
+      max-width: 400px;
+      margin-top: 6px;
+    }
+
+    /* ============================================
+       TIER 1 CARD — spans 2 cols
+       ============================================ */
+
+    .tap-card--tier1 {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+    .tap-card--tier1 .tap-card-image {
+      width: 44%;
+      flex-shrink: 0;
+      min-height: 240px;
+    }
+    .tap-card--tier1 .tap-card-body {
+      padding: 28px 28px 24px;
+    }
+    .tap-card--tier1 h2 {
+      font-size: 1.45rem;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .tap-card--tier1 .tap-card-subhead {
+      font-size: 0.95rem;
+    }
+
+    /* ============================================
+       IMAGES
+       ============================================ */
+
     .tap-card-image {
+      overflow: hidden;
+      background: #1a1508;
+    }
+    .tap-card:not(.tap-card--tier1):not(.tap-card--hero) .tap-card-image {
       width: 100%;
       aspect-ratio: 16/9;
-      overflow: hidden;
-      background: var(--mid-grey);
-      position: relative;
     }
     .tap-card-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
       transition: transform 0.4s ease;
     }
     .tap-card:hover .tap-card-image img { transform: scale(1.04); }
-    .tap-card-image-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      background: linear-gradient(135deg, #1a1508 0%, #2d2010 100%);
-    }
+
+    /* ============================================
+       CARD BODY
+       ============================================ */
+
     .tap-card-body {
-      padding: 28px 24px 24px;
+      padding: 20px 20px 20px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .tap-card-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .tap-card-tag {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: rgba(201,168,76,0.1);
-      padding: 4px 10px;
-      border-radius: 2px;
-    }
-    .tap-card-date { font-size: 0.8rem; color: var(--text-body); opacity: 0.4; }
-    .tap-card h2 {
-      font-size: 1.2rem;
-      line-height: 1.3;
-      margin-bottom: 12px;
-      color: var(--off-white);
-      font-family: var(--font-body);
-      font-weight: 700;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-    .tap-card h2 a { color: inherit; transition: color 0.2s; }
-    .tap-card h2 a:hover { color: var(--gold); }
-    .tap-card-excerpt {
-      font-size: 0.9rem;
+
+    .tap-card-date {
+      font-size: 0.68rem;
       color: var(--text-body);
-      opacity: 0.65;
-      line-height: 1.7;
-      flex: 1;
-      margin-bottom: 20px;
+      opacity: 0.28;
+      margin-bottom: 10px;
+      display: block;
+      letter-spacing: 0.04em;
     }
-    .tap-card-read {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.8;
-      transition: opacity 0.2s;
-    }
-    .tap-card-read:hover { opacity: 1; }
 
-    .tap-card--featured {
-      grid-column: span 2;
-      flex-direction: row;
+    .tap-card h2 {
+      font-size: 1.12rem;
+      line-height: 1.3;
+      color: var(--off-white);
+      margin-bottom: 10px;
+      letter-spacing: 0.012em;
     }
-    .tap-card--featured .tap-card-image {
-      width: 45%;
-      aspect-ratio: unset;
-      flex-shrink: 0;
-    }
-    .tap-card--featured .tap-card-body { padding: 36px 32px; }
-    .tap-card--featured h2 { font-size: 1.6rem; }
 
-    .tap-card--locked {
-      opacity: 0.6;
-      pointer-events: none;
+    .tap-card-subhead {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      opacity: 0.55;
+      line-height: 1.55;
+      margin-bottom: 4px;
     }
-    .tap-card--locked .tap-card-image img { filter: grayscale(30%); }
-    .tap-card-soon {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.5;
+
+    .tap-card-subhead-2 {
+      font-size: 0.83rem;
+      color: var(--text-body);
+      opacity: 0.28;
+      line-height: 1.55;
+      font-style: italic;
     }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
 
     @media (max-width: 900px) {
       .tap-grid { grid-template-columns: 1fr 1fr; }
-      .tap-card--featured { grid-column: span 2; flex-direction: column; }
-      .tap-card--featured .tap-card-image { width: 100%; aspect-ratio: 16/9; }
+      .tap-card--hero { grid-column: span 2; min-height: auto; }
+      .tap-card--tier1 { grid-column: span 2; }
     }
     @media (max-width: 600px) {
       .tap-grid { grid-template-columns: 1fr; }
-      .tap-card--featured { grid-column: span 1; }
+      .tap-card--hero { grid-column: span 1; flex-direction: column; }
+      .tap-card--hero .tap-card-image { width: 100%; min-height: 220px; }
+      .tap-card--hero .tap-card-body { padding: 28px 24px; }
+      .tap-card--tier1 { grid-column: span 1; flex-direction: column; }
+      .tap-card--tier1 .tap-card-image { width: 100%; min-height: 200px; }
     }
 
   </style>
@@ -264,29 +358,25 @@
 
   <section class="tap-posts">
     <div class="tap-posts-inner">
-
       <div class="tap-grid">
 
-        <!-- Post 01 — Featured — LIVE -->
-        <article class="tap-card tap-card--featured">
+        <!-- Why the Pub — HERO. This is the most recent post.
+             The rebuild script replaces this section automatically
+             when new posts publish from _scheduled/. -->
+
+        <a href="why-the-pub-is-the-last-honest-place-left.html" class="tap-card tap-card--hero">
           <div class="tap-card-image">
-            <img src="../assets/pub-card.jpg" alt="A coastal pub interior at golden hour" />
+            <img src="../assets/pub-card.jpg" alt="Why the Pub is the Last Honest Place Left" />
           </div>
           <div class="tap-card-body">
-            <div class="tap-card-meta">
-              <span class="tap-card-tag">Pub Culture</span>
-              <span class="tap-card-date">11 April 2026</span>
-            </div>
-            <h2><a href="why-the-pub-is-the-last-honest-place-left.html">Why the Pub is the Last Honest Place Left</a></h2>
-            <p class="tap-card-excerpt">Everywhere else you go, people are performing. The pub is where that stops. Here's why it matters — and why we built a brand around it.</p>
-            <a href="why-the-pub-is-the-last-honest-place-left.html" class="tap-card-read">Read More →</a>
+            <span class="tap-card-date">11 April 2026</span>
+            <h2>Why the Pub is the Last Honest Place Left</h2>
+            <p class="tap-card-subhead">Everywhere else you go, people are performing.</p>
+            <p class="tap-card-subhead-2">The pub is where that stops.</p>
           </div>
-        </article>
-
-
+        </a>
 
       </div>
-
     </div>
   </section>
 
