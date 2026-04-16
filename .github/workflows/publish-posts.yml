@@ -29,7 +29,7 @@ jobs:
               continue
             fi
             echo "Found $file with publish date $PUBLISH_DATE"
-            if [[ "$PUBLISH_DATE" <= "$TODAY" ]]; then
+            if [ "$PUBLISH_DATE" \<= "$TODAY" ]; then
               echo "Moving $file to the-tap/"
               mv "$file" "the-tap/$(basename $file)"
               MOVED=1
