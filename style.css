@@ -999,11 +999,10 @@ a.design-card {
 }
 
 /* ============================
-   THE TAP — SCOPED FONT OVERRIDES
-   Playfair Display for tap card headlines.
-   Uses !important to override global h2 font-family rule.
-   Does not affect any other page.
+   THE TAP — SCOPED OVERRIDES
    ============================ */
+
+/* Font overrides -- beat global h2 rule */
 .tap-card h2,
 .tap-card--hero h2,
 .tap-card--tier1 h2 {
@@ -1011,11 +1010,54 @@ a.design-card {
   font-weight: 500 !important;
   letter-spacing: 0.012em;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .tap-hero-inner h1 {
   font-family: 'Playfair Display', Georgia, serif !important;
   font-weight: 500 !important;
-  letter-spacing: 0.01em;
+}
+
+/* Hero card layout -- force horizontal */
+.tap-card--hero {
+  display: flex !important;
+  flex-direction: row !important;
+  min-height: 360px;
+}
+
+.tap-card--hero .tap-card-image {
+  width: 52% !important;
+  flex-shrink: 0 !important;
+  min-height: 360px;
+  position: relative;
+}
+
+.tap-card--hero .tap-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover;
+}
+
+/* Tier 1 card layout -- force horizontal */
+.tap-card--tier1 {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.tap-card--tier1 .tap-card-image {
+  width: 44% !important;
+  flex-shrink: 0 !important;
+  min-height: 240px;
+  position: relative;
+}
+
+.tap-card--tier1 .tap-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover;
 }
