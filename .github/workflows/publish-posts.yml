@@ -17,19 +17,19 @@ jobs:
 
       - name: Publish due posts
         run: |
-          TODAY=$(date -u '+%Y-%m-%d')
+          TODAY=$(date -u '+%Y%m%d')
           echo "Today is $TODAY"
           MOVED=0
 
           for file in _scheduled/*.html; do
             [ -f "$file" ] || continue
-            PUBLISH_DATE=$(grep -o 'publish-date" content="[^"]*"' "$file" | grep -o '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}')
+            PUBLISH_DATE=$(grep -o 'publish-date" content="[^"]*"' "$file" | grep -o '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}' | tr -d '-')
             if [ -z "$PUBLISH_DATE" ]; then
               echo "No publish-date found in $file — skipping"
               continue
             fi
-            echo "Found $file with publish date $PUBLISH_DATE"
-            if [ "$PUBLISH_DATE" \<= "$TODAY" ]; then
+            echo "Found $file with publish date $PUBLISH_DATE vs today $TODAY"
+            if [ "$PUBLISH_DATE" -le "$TODAY" ]; then
               echo "Moving $file to the-tap/"
               mv "$file" "the-tap/$(basename $file)"
               MOVED=1
