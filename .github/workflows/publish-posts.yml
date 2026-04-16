@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Publish due posts and rebuild index
+      - name: Publish due posts
         run: |
           TODAY=$(date -u '+%Y-%m-%d')
           echo "Today is $TODAY"
@@ -36,104 +36,19 @@ jobs:
             fi
           done
 
-          if [ "$MOVED" -eq 1 ]; then
-            echo "Rebuilding blog index..."
-            python3 - << 'PYEOF'
-import os
-import re
+          echo "MOVED=$MOVED" >> $GITHUB_ENV
 
-TAP_DIR = "the-tap"
-ASSETS_PREFIX = "../assets/"
+      - name: Rebuild blog index
+        if: env.MOVED == '1'
+        run: |
+          echo "Rebuilding blog index..."
+          python3 .github/scripts/rebuild-index.py
 
-def parse_meta(filepath):
-    with open(filepath, "r") as f:
-        content = f.read()
-    match = re.search(r'<!-- POST_META\n(.*?)-->', content, re.DOTALL)
-    if not match:
-        return None
-    meta = {}
-    for line in match.group(1).strip().split("\n"):
-        if ":" in line:
-            key, _, value = line.partition(":")
-            meta[key.strip()] = value.strip()
-    return meta
-
-def parse_publish_date(filepath):
-    with open(filepath, "r") as f:
-        content = f.read()
-    match = re.search(r'publish-date" content="([^"]+)"', content)
-    return match.group(1) if match else "9999-12-31"
-
-LAUNCH = {
-    "filename": "why-the-pub-is-the-last-honest-place-left.html",
-    "title": "Why the Pub is the Last Honest Place Left",
-    "date": "11 April 2026",
-    "tag": "Pub Culture",
-    "excerpt": "Everywhere else you go, people are performing. The pub is where that stops.",
-    "card_image": "pub-card.jpg",
-    "card_alt": "A coastal pub interior at golden hour"
-}
-
-def card_html(title, date, tag, excerpt, img, alt, href, featured=False):
-    cls = 'tap-card tap-card--featured' if featured else 'tap-card'
-    img_style = 'width:45%; aspect-ratio:unset; flex-shrink:0;' if featured else ''
-    return f"""        <article class="{cls}">
-          <div class="tap-card-image" {'style="' + img_style + '"' if img_style else ''}>
-            <img src="{ASSETS_PREFIX}{img}" alt="{alt}" />
-          </div>
-          <div class="tap-card-body">
-            <div class="tap-card-meta">
-              <span class="tap-card-tag">{tag}</span>
-              <span class="tap-card-date">{date}</span>
-            </div>
-            <h2><a href="{href}">{title}</a></h2>
-            <p class="tap-card-excerpt">{excerpt}</p>
-            <a href="{href}" class="tap-card-read">Read More &rarr;</a>
-          </div>
-        </article>"""
-
-posts = []
-for fname in os.listdir(TAP_DIR):
-    if fname.endswith(".html") and fname != "index.html" and fname != LAUNCH["filename"]:
-        fpath = os.path.join(TAP_DIR, fname)
-        meta = parse_meta(fpath)
-        date = parse_publish_date(fpath)
-        if meta:
-            posts.append({"filename": fname, "meta": meta, "date": date})
-
-posts.sort(key=lambda x: x["date"], reverse=True)
-
-cards = []
-if posts:
-    p = posts[0]
-    m = p["meta"]
-    cards.append(card_html(m["title"], m["date"], m["tag"], m["excerpt"], m["card_image"], m["card_alt"], p["filename"], featured=True))
-    for p in posts[1:]:
-        m = p["meta"]
-        cards.append(card_html(m["title"], m["date"], m["tag"], m["excerpt"], m["card_image"], m["card_alt"], p["filename"]))
-    cards.append(card_html(LAUNCH["title"], LAUNCH["date"], LAUNCH["tag"], LAUNCH["excerpt"], LAUNCH["card_image"], LAUNCH["card_alt"], LAUNCH["filename"]))
-else:
-    cards.append(card_html(LAUNCH["title"], LAUNCH["date"], LAUNCH["tag"], LAUNCH["excerpt"], LAUNCH["card_image"], LAUNCH["card_alt"], LAUNCH["filename"], featured=True))
-
-grid = "      <div class=\"tap-grid\">\n\n" + "\n\n".join(cards) + "\n\n      </div>"
-
-index_path = os.path.join(TAP_DIR, "index.html")
-with open(index_path, "r") as f:
-    index = f.read()
-
-new_index = re.sub(r'<div class="tap-grid">.*?</div>(\s*\n\s*</div>\s*\n\s*</section>)', grid + r'\1', index, flags=re.DOTALL)
-
-with open(index_path, "w") as f:
-    f.write(new_index)
-
-print("Index rebuilt")
-PYEOF
-
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "Publish scheduled post(s) for $TODAY and rebuild index"
-            git push
-          else
-            echo "No posts due today"
-          fi
+      - name: Commit changes
+        if: env.MOVED == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Auto-publish scheduled posts for $TODAY"
+          git push
