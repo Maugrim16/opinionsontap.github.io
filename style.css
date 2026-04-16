@@ -997,3 +997,25 @@ a.design-card {
   :root { --section-pad: 72px 20px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* ============================
+   THE TAP — SCOPED FONT OVERRIDES
+   Playfair Display for tap card headlines.
+   Uses !important to override global h2 font-family rule.
+   Does not affect any other page.
+   ============================ */
+.tap-card h2,
+.tap-card--hero h2,
+.tap-card--tier1 h2 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.012em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tap-hero-inner h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+}
