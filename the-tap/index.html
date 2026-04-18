@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Tap — Pub Culture, Travel & Golf Blog | Opinions on Tap</title>
-  <meta name="description" content="Pub culture, travel, golf and the occasional opinion worth reading. The Tap is the blog from Opinions on Tap — a pub life brand built around the pint glass as a lens on the world." />
+  <meta name="description" content="Pub culture, travel, golf and the occasional opinion worth reading. The Tap is the blog from Opinions on Tap." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://opinionsontap.com/the-tap/" />
   <meta property="og:title" content="The Tap — Pub Culture, Travel & Golf Blog" />
@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .tap-card h2, .tap-card--hero h2 {
+    .tap-card h2, .tap-card--hero h2, .tap-card--tier1 h2 {
       font-family: 'Playfair Display', Georgia, serif;
       font-weight: 500;
       letter-spacing: 0.012em;
@@ -53,15 +53,17 @@
     a.tap-card { text-decoration: none; display: flex; flex-direction: column; }
     .tap-card { background: var(--warm-dark); border: 1px solid rgba(201,168,76,0.08); border-radius: 2px; overflow: hidden; transition: border-color 0.25s, transform 0.25s; display: flex; flex-direction: column; cursor: pointer; }
     .tap-card:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-4px); }
-    .tap-card--hero { grid-column: span 3; flex-direction: row; min-height: 360px; border-color: rgba(201,168,76,0.1); }
+    .tap-card--hero { grid-column: span 3; flex-direction: row !important; min-height: 360px; border-color: rgba(201,168,76,0.1); }
     .tap-card--hero:hover { transform: translateY(-3px); border-color: rgba(201,168,76,0.3); }
-    .tap-card--hero .tap-card-image { width: 52%; flex-shrink: 0; }
+    .tap-card--hero .tap-card-image { width: 52%; flex-shrink: 0; min-height: 360px; position: relative; }
+    .tap-card--hero .tap-card-image img { position: absolute; inset: 0; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: cover; }
     .tap-card--hero .tap-card-body { padding: 52px 56px; justify-content: center; }
     .tap-card--hero h2 { font-size: clamp(1.9rem, 2.8vw, 2.7rem); line-height: 1.15; margin-bottom: 20px; }
     .tap-card--hero .tap-card-date { margin-bottom: 18px; font-size: 0.72rem; }
     .tap-card--hero .tap-card-subhead { font-size: 1.05rem; line-height: 1.55; max-width: 400px; }
-    .tap-card--tier1 { grid-column: span 2; flex-direction: row; }
-    .tap-card--tier1 .tap-card-image { width: 44%; flex-shrink: 0; min-height: 240px; }
+    .tap-card--tier1 { grid-column: span 2; flex-direction: row !important; }
+    .tap-card--tier1 .tap-card-image { width: 44%; flex-shrink: 0; min-height: 240px; position: relative; }
+    .tap-card--tier1 .tap-card-image img { position: absolute; inset: 0; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: cover; }
     .tap-card--tier1 .tap-card-body { padding: 28px 28px 24px; }
     .tap-card--tier1 h2 { font-size: 1.45rem; line-height: 1.2; margin-bottom: 14px; }
     .tap-card--tier1 .tap-card-subhead { font-size: 0.95rem; }
@@ -82,10 +84,10 @@
     }
     @media (max-width: 600px) {
       .tap-grid { grid-template-columns: 1fr; }
-      .tap-card--hero { grid-column: span 1; flex-direction: column; }
+      .tap-card--hero { grid-column: span 1; }
       .tap-card--hero .tap-card-image { width: 100%; min-height: 220px; }
       .tap-card--hero .tap-card-body { padding: 28px 24px; }
-      .tap-card--tier1 { grid-column: span 1; flex-direction: column; }
+      .tap-card--tier1 { grid-column: span 1; }
       .tap-card--tier1 .tap-card-image { width: 100%; min-height: 200px; }
     }
   </style>
@@ -106,7 +108,6 @@
     <div class="nav-cta"><a href="../shop.html" class="btn btn-primary">Shop</a></div>
     <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
-
   <section class="tap-hero">
     <div class="tap-hero-inner">
       <p class="concept-label">The Tap</p>
@@ -114,13 +115,11 @@
       <p>Pub culture, great views, cold ones and the occasional take worth reading. Pull up a stool.</p>
     </div>
   </section>
-
   <section class="tap-intro">
     <div class="tap-intro-inner">
       <p>The Tap covers pub culture, travel, golf, fishing and the kind of opinions that come out after the second round. Stories about the road, the fairway, the water and the bar. Written for people who wear their experience rather than talk about it.</p>
     </div>
   </section>
-
   <section class="tap-posts">
     <div class="tap-posts-inner">
       <div class="tap-grid">
@@ -135,10 +134,19 @@
             <p class="tap-card-subhead">They decommissioned it in 1985. Nobody told the road. Why the Mother Road is more alive now than it has been in decades.</p>
           </div>
         </a>
+        <a href="why-the-pub-is-the-last-honest-place-left.html" class="tap-card">
+          <div class="tap-card-image">
+            <img src="../assets/pub-card.jpg" alt="Why the Pub is the Last Honest Place Left" />
+          </div>
+          <div class="tap-card-body">
+            <span class="tap-card-date">11 April 2026</span>
+            <h2>Why the Pub is the Last Honest Place Left</h2>
+            <p class="tap-card-subhead">Everywhere else you go, people are performing. The pub is where that stops.</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -169,7 +177,6 @@
       <span>opinionsontap.com</span>
     </div>
   </footer>
-
   <script>
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
