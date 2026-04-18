@@ -39,16 +39,14 @@ jobs:
           echo "MOVED=$MOVED" >> $GITHUB_ENV
 
       - name: Rebuild blog index
-        if: env.MOVED == '1'
         run: |
           echo "Rebuilding blog index..."
           python3 .github/scripts/rebuild-index.py
 
       - name: Commit changes
-        if: env.MOVED == '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Auto-publish scheduled posts for $TODAY"
+          git diff --staged --quiet || git commit -m "Auto-publish scheduled posts for $TODAY"
           git push
