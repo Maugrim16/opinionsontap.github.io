@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opinions on Tap — Life Through the Lens of a Pint Glass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Preview hero override */
+    .hero::after {
+      background-image: url('assets/pursuit-bg.jpg') !important;
+      background-position: center 30% !important;
+    }
+
+
+    /* ===========================
+       PREVIEW OVERRIDES
+       New brand voice homepage
+       =========================== */
+
+    /* Hero rewrite */
+    .hero-headline {
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem) !important;
+      line-height: 1.05 !important;
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-weight: 600 !important;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem !important;
+      opacity: 0.75 !important;
+      line-height: 1.75 !important;
+      max-width: 480px;
+    }
+
+    .hero-gift {
+      font-size: 0.88rem !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      color: var(--gold) !important;
+      opacity: 0.7 !important;
+      font-family: 'Barlow Condensed', sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+    /* Concept section rewrite */
+    .concept-heading {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-size: clamp(1.8rem, 3vw, 2.8rem) !important;
+      font-weight: 600 !important;
+      line-height: 1.2 !important;
+    }
+
+    /* Nav -- de-emphasise Shop, surface The Tap */
+    .nav-links li:nth-child(3) a {
+      opacity: 0.45 !important;
+      font-size: 0.72rem !important;
+    }
+    .nav-links li:nth-child(5) a {
+      color: var(--gold) !important;
+      opacity: 0.9 !important;
+    }
+
+    /* Content strip -- new section between concept and designs */
+    .content-strip {
+      background: var(--black);
+      border-top: 1px solid rgba(201,168,76,0.12);
+      border-bottom: 1px solid rgba(201,168,76,0.12);
+      padding: 80px 24px;
+    }
+    .content-strip-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .content-strip-text .concept-label {
+      margin-bottom: 20px;
+    }
+    .content-strip-text h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--off-white);
+      margin-bottom: 20px;
+    }
+    .content-strip-text p {
+      font-size: 1rem;
+      color: var(--text-body);
+      opacity: 0.7;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .content-strip-text p + p { margin-top: 0; }
+    .content-strip-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .content-strip-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .content-post-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 2px;
+      padding: 20px 22px;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .content-post-card:hover {
+      border-color: rgba(201,168,76,0.28);
+      transform: translateX(4px);
+    }
+    .content-post-card-date {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      opacity: 0.6;
+      white-space: nowrap;
+      padding-top: 3px;
+      min-width: 80px;
+    }
+    .content-post-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--off-white);
+      line-height: 1.3;
+    }
+    .content-post-card-sub {
+      font-size: 0.8rem;
+      color: var(--text-body);
+      opacity: 0.45;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* POV strip rewrite */
+    .pov-strip h2 {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-size: clamp(1.8rem, 3.5vw, 3rem) !important;
+      font-weight: 500 !important;
+    }
+
+    /* Footer desc update */
+    .footer-desc-new {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      opacity: 0.45;
+      line-height: 1.7;
+    }
+
+    /* Designs header update */
+    .designs-header p:last-child {
+      opacity: 0.55;
+    }
+
+    /* Three shirt showcase */
+    .pov-three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .pov-card {
+      background: var(--warm-dark);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.2s;
+    }
+    .pov-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .pov-card-image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: #1a1508;
+    }
+    .pov-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .pov-card:hover .pov-card-image img { transform: scale(1.04); }
+    .pov-card-body {
+      padding: 24px 22px 22px;
+    }
+    .pov-card-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.65;
+      margin-bottom: 8px;
+    }
+    .pov-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--off-white);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+    .pov-card-desc {
+      font-size: 0.86rem;
+      color: var(--text-body);
+      opacity: 0.55;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .pov-card-link {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.75;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .pov-card:hover .pov-card-link { opacity: 1; }
+
+    @media (max-width: 768px) {
+      .pov-three-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+
+    @media (max-width: 768px) {
+      .content-strip-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="oot-preview-index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Opinions on Tap" />
+      <span class="nav-logo-text">Opinions on Tap</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="oot-preview-index.html">Home</a></li>
+      <li><a href="oot-preview-story.html">Our Story</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="the-tap/tap-preview-index.html">The Tap</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="the-tap/tap-preview-index.html" class="btn btn-primary">The Tap</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-headline fade-up">Life through the lens<br>of a pint glass.</h1>
+        <p class="hero-sub fade-up delay-2">
+          Roads, coasts, courses and cold ones. Travel, outdoor life and dry perspective — worn on a shirt, told in a story.
+        </p>
+        <p class="hero-gift fade-up delay-3">The pint is the lens. The journey is the story.</p>
+        <div class="hero-actions fade-up delay-3">
+          <a href="oot-preview-story.html" class="btn btn-primary">Our Story</a>
+          <a href="the-tap/tap-preview-index.html" class="btn btn-outline">Read The Tap</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap fade-up delay-2">
+        <img src="assets/logo.png" alt="Opinions on Tap badge" class="hero-logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">The Pint is the Lens <span>★</span></span>
+      <span class="marquee-item">Roads. Coasts. Courses. Cold Pints. <span>★</span></span>
+      <span class="marquee-item">It's My Pint of View <span>★</span></span>
+      <span class="marquee-item">The Journey is the Story <span>★</span></span>
+      <span class="marquee-item">Opinions on Tap <span>★</span></span>
+      <span class="marquee-item">Earn the View <span>★</span></span>
+      <span class="marquee-item">The Pint is the Lens <span>★</span></span>
+      <span class="marquee-item">Roads. Coasts. Courses. Cold Pints. <span>★</span></span>
+      <span class="marquee-item">It's My Pint of View <span>★</span></span>
+      <span class="marquee-item">The Journey is the Story <span>★</span></span>
+      <span class="marquee-item">Opinions on Tap <span>★</span></span>
+      <span class="marquee-item">Earn the View <span>★</span></span>
+    </div>
+  </div>
+
+  <!-- CONCEPT -->
+  <section class="concept section">
+    <div class="container concept-inner">
+      <div class="concept-text">
+        <p class="concept-label">The Idea</p>
+        <h2 class="concept-heading">
+          The pint is the lens.<br><span class="gold">The journey is the story.</span>
+        </h2>
+        <div class="concept-body">
+          <p>
+            Not a beer brand. Not pub merch.
+          </p>
+          <p>
+            Opinions on Tap is built around travel, outdoor life and earned views. The pint glass is the lens — the way you frame what you saw, what you did and what you reckon about it. Sometimes it is literally in the shot. Sometimes it is just how the story gets told.
+          </p>
+          <p>
+            Road trips. Reefs. Fairways. Cold ones at the end of something worth doing. That is the brand.
+          </p>
+        </div>
+        <div class="divider"><span class="divider-star">★</span></div>
+        <a href="oot-preview-story.html" class="btn btn-outline" style="margin-top: 8px;">Read the Full Story</a>
+      </div>
+      <div class="concept-visual">
+        <div class="concept-badge-wrap">
+          <img src="assets/logo.png" alt="Opinions on Tap badge" class="concept-badge" />
+        </div>
+        <p class="concept-quote">It's My Pint of View</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT STRIP — The Tap -->
+  <section class="content-strip">
+    <div class="content-strip-inner">
+      <div class="content-strip-text">
+        <p class="concept-label">The Tap</p>
+        <h2>Stories from the road, the water and the fairway.</h2>
+        <p>The Tap is where the views live. Travel, outdoor life, golf, fishing and the occasional dry opinion about all of it.</p>
+        <p>Written the way you would tell it over a cold one. No fridge magnet sentences.</p>
+        <div class="content-strip-links">
+          <a href="the-tap/tap-preview-index.html" class="btn btn-primary">Read The Tap</a>
+          <a href="oot-preview-story.html" class="btn btn-outline">Our Story</a>
+        </div>
+      </div>
+      <div class="content-strip-posts">
+        <a href="the-tap/route-66-the-road-that-refused-to-die.html" class="content-post-card">
+          <span class="content-post-card-date">17 Apr 2026</span>
+          <div>
+            <p class="content-post-card-title">Route 66: The Road That Refused to Die</p>
+            <p class="content-post-card-sub">They decommissioned it in 1985. Nobody told the road.</p>
+          </div>
+        </a>
+        <a href="the-tap/why-the-pub-is-the-last-honest-place-left.html" class="content-post-card">
+          <span class="content-post-card-date">11 Apr 2026</span>
+          <div>
+            <p class="content-post-card-title">Why the Pub is the Last Honest Place Left</p>
+            <p class="content-post-card-sub">Everywhere else you go, people are performing.</p>
+          </div>
+        </a>
+        <a href="the-tap/tap-preview-index.html" class="content-post-card" style="border-style: dashed; opacity: 0.5;">
+          <span class="content-post-card-date">Coming</span>
+          <div>
+            <p class="content-post-card-title">The Campfire Debrief</p>
+            <p class="content-post-card-sub">There are better ways to start a fire. Nobody uses them.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNS -->
+  <section class="designs section">
+    <div class="container">
+      <div class="designs-header">
+        <p class="concept-label">The Shirts</p>
+        <h2>The pursuit. On a shirt.</h2>
+        <p>Three designs. Each one built around a real place, a real pursuit, or a moment worth marking.</p>
+      </div>
+
+      <div class="pov-three-grid">
+
+        <div class="pov-card">
+          <div class="pov-card-image">
+            <img src="assets/lifestyle-deepsea.jpg" alt="Deep Sea Pint of View fishing shirt" />
+          </div>
+          <div class="pov-card-body">
+            <p class="pov-card-label">Fishing</p>
+            <h3 class="pov-card-title">Deep Sea Pint of View</h3>
+            <p class="pov-card-desc">Early mornings. Cold water. The last cast that wasn't. For the fisherman who knows exactly what that means.</p>
+            <a href="https://www.amazon.com/dp/B0GW375XQ8" target="_blank" rel="noopener" class="pov-card-link">Shop on Amazon →</a>
+          </div>
+        </div>
+
+        <div class="pov-card">
+          <div class="pov-card-image">
+            <img src="assets/lifestyle-offtrack.jpg" alt="Off Track Pint of View overland shirt" />
+          </div>
+          <div class="pov-card-body">
+            <p class="pov-card-label">Overland</p>
+            <h3 class="pov-card-title">Off Track Pint of View</h3>
+            <p class="pov-card-desc">Off the sealed road. Where the track gets rough and the views get honest. For the ones who know the way back.</p>
+            <a href="https://www.amazon.com/dp/B0GVVXX8N9" target="_blank" rel="noopener" class="pov-card-link">Shop on Amazon →</a>
+          </div>
+        </div>
+
+        <div class="pov-card">
+          <div class="pov-card-image">
+            <img src="assets/lifestyle-grandad.jpg" alt="This One's for Grandad shirt" />
+          </div>
+          <div class="pov-card-body">
+            <p class="pov-card-label">Occasion</p>
+            <h3 class="pov-card-title">This One's for Grandad</h3>
+            <p class="pov-card-desc">For the man who has been everywhere, seen everything and still shows up. The gift that actually lands.</p>
+            <a href="https://www.amazon.com/dp/B0GW5N6RM4" target="_blank" rel="noopener" class="pov-card-link">Shop on Amazon →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 56px;">
+        <p style="font-size: 0.88rem; color: var(--text-body); opacity: 0.45; margin-bottom: 16px; letter-spacing: 0.04em;">More designs available on Amazon</p>
+        <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3APint%2Bof%2BView%2Bby%2BOpinions%2Bon%2BTap" target="_blank" rel="noopener" class="btn btn-outline">View Full Collection on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POV STRIP -->
+  <section class="pov-strip">
+    <div class="pov-strip-inner">
+      <h2>What's your pint of view?</h2>
+      <p>The places you have been. The pursuits you keep coming back to. There is a shirt for that.</p>
+      <a href="shop.html" class="btn btn-dark">Shop on Amazon</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
+        <p class="footer-tagline">It's My Pint of View</p>
+        <p class="footer-desc footer-desc-new">Travel, outdoor life and dry perspective, seen through the pint lens. Designed in Australia. Shipped worldwide via Amazon.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="oot-preview-index.html">Home</a></li>
+          <li><a href="oot-preview-story.html">Our Story</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="the-tap/tap-preview-index.html">The Tap</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h4>Follow Along</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/opinionsontapofficial/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Opinions on Tap. All rights reserved.</span>
+      <span>opinionsontap.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+
+</body>
+</html>
