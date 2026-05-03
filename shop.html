@@ -3,45 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop Pint of View T-Shirts | Golf Gifts, Travel Shirts | Opinions on Tap</title>
-  <meta name="description" content="Shop the Pint of View collection. Golf gifts, landmark t-shirts and pub life apparel featuring iconic views illustrated inside a pint glass. A good gift is something they recognise. Shipped worldwide via Amazon." />
+  <title>Shop — Pint of View T-Shirts | Opinions on Tap</title>
+  <meta name="description" content="Premium graphic tees from the Pint of View series. Travel, outdoor life and dry perspective, printed on quality shirts and shipped worldwide via Amazon." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://opinionsontap.com/shop.html" />
-  <meta property="og:title" content="Shop — Pint of View Collection | Opinions on Tap" />
-  <meta property="og:description" content="Golf gifts, landmark t-shirts and pub life apparel. Every design features a real place or moment illustrated inside a pint glass." />
-  <meta property="og:image" content="https://opinionsontap.com/assets/design-sydney.png" />
+  <meta property="og:title" content="Shop — Pint of View T-Shirts | Opinions on Tap" />
+  <meta property="og:description" content="Premium graphic tees from the Pint of View series. Shipped worldwide via Amazon." />
+  <meta property="og:image" content="https://opinionsontap.com/assets/lifestyle-deepsea.jpg" />
   <meta property="og:site_name" content="Opinions on Tap" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shop — Pint of View Collection | Opinions on Tap" />
-  <meta name="twitter:description" content="Golf gifts, landmark t-shirts and pub life apparel shipped worldwide via Amazon." />
-  <meta name="twitter:image" content="https://opinionsontap.com/assets/design-sydney.png" />
   <link rel="canonical" href="https://opinionsontap.com/shop.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <style>
 
-    /* SHOP HERO */
+    /* HERO */
     .shop-hero {
-      min-height: 50vh;
-      display: flex;
-      align-items: flex-end;
+      background: var(--warm-dark);
+      padding: 160px 24px 80px;
       position: relative;
       overflow: hidden;
-      background: var(--black);
+      border-bottom: 1px solid rgba(201,168,76,0.12);
     }
     .shop-hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('assets/bigsur-bg.jpg');
+      background-image: url('assets/reef-bg.jpg');
       background-size: cover;
-      background-position: center 40%;
+      background-position: center 50%;
       z-index: 0;
     }
     .shop-hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(10,7,2,0.97) 0%, rgba(10,7,2,0.55) 50%, rgba(10,7,2,0.2) 100%);
+      background: linear-gradient(to right, rgba(10,7,2,0.92) 0%, rgba(10,7,2,0.75) 55%, rgba(10,7,2,0.4) 100%);
       z-index: 1;
       pointer-events: none;
     }
@@ -50,343 +48,248 @@
       z-index: 2;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 24px 72px;
-      width: 100%;
     }
-    .shop-back {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.7;
-      padding-top: 120px;
-      display: block;
-      margin-bottom: 32px;
-      transition: opacity 0.2s;
-    }
-    .shop-back:hover { opacity: 1; }
-    .shop-hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
+    .shop-hero-inner h1 {
+      font-size: clamp(2.8rem, 5vw, 5rem);
       line-height: 1.05;
       color: var(--off-white);
       margin-bottom: 16px;
     }
-    .shop-hero p {
+    .shop-hero-inner h1 span { color: var(--gold); }
+    .shop-hero-inner p {
       font-size: 1.05rem;
       color: var(--text-body);
       opacity: 0.7;
-      max-width: 520px;
+      max-width: 480px;
       line-height: 1.7;
     }
-    .shop-amazon-note {
-      background: rgba(201,168,76,0.06);
-      border: 1px solid rgba(201,168,76,0.15);
-      border-radius: 2px;
-      padding: 16px 24px;
-      margin: 48px 0 0;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.88rem;
-      color: var(--text-body);
-      opacity: 0.75;
-    }
-    .shop-amazon-note span { color: var(--gold); font-weight: 700; }
 
-    /* FEATURED */
-    .featured-section {
-      background: #06091a;
-      padding: 64px 24px;
+    /* SHOP SECTION */
+    .shop-section {
+      background: var(--black);
+      padding: var(--section-pad);
     }
-    .featured-inner {
+    .shop-inner {
       max-width: var(--max-width);
       margin: 0 auto;
     }
-    .featured-label {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+
+    /* SECTION LABEL */
+    .shop-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
       color: var(--gold);
-      background: rgba(201,168,76,0.15);
-      padding: 4px 12px;
-      border-radius: 2px;
-      display: inline-block;
+      opacity: 0.8;
+      text-transform: uppercase;
       margin-bottom: 32px;
-    }
-    .featured-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .featured-img-wrap {
-      background: #0d1020;
-      border-radius: 2px;
-      overflow: hidden;
-      line-height: 0;
-    }
-    .featured-img-wrap img {
-      width: 100%;
       display: block;
     }
-    .featured-series {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.7;
-      margin-bottom: 12px;
-    }
-    .featured-title {
-      font-family: var(--font-slab);
-      font-size: clamp(2rem, 3.5vw, 3.2rem);
-      color: var(--off-white);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .featured-desc {
-      font-size: 1.1rem;
-      color: var(--text-body);
-      opacity: 0.75;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-    .featured-sub {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      opacity: 0.5;
-      line-height: 1.7;
-      margin-bottom: 36px;
-    }
-    .featured-actions {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .featured-shipping {
-      font-size: 0.85rem;
-      color: var(--text-body);
-      opacity: 0.4;
-    }
 
-    /* SECTION */
-    .shop-section {
-      padding: 72px 24px;
-    }
-    .shop-section:nth-child(odd) { background: var(--black); }
-    .shop-section:nth-child(even) { background: var(--warm-dark); }
-    .shop-section-inner { max-width: var(--max-width); margin: 0 auto; }
-    .shop-section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-    }
-    .shop-section-header h2 {
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      color: var(--off-white);
-    }
-    .section-count {
-      font-family: var(--font-body);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.6;
-    }
-
-    /* PRODUCT GRID */
-    .product-grid {
+    /* GRID */
+    .shop-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+      margin-bottom: 48px;
     }
 
-    /* PRODUCT CARD — image displays as-is, info below */
-    .product-card {
-      background: var(--mid-grey);
+    /* SHIRT CARD */
+    .shirt-card {
+      background: var(--warm-dark);
       border: 1px solid rgba(201,168,76,0.08);
       border-radius: 2px;
       overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
       display: flex;
       flex-direction: column;
-      text-decoration: none;
+      transition: border-color 0.25s, transform 0.25s;
     }
-    .product-card:hover {
+    .shirt-card:hover {
       border-color: rgba(201,168,76,0.25);
-      transform: translateY(-3px);
+      transform: translateY(-4px);
     }
-    .product-img-wrap {
-      background: #ffffff;
-      position: relative;
-      line-height: 0;
-    }
-    .product-img-wrap img {
+
+    .shirt-card-image {
       width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: #1a1508;
+    }
+    .shirt-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
     }
-    .product-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: var(--gold);
-      color: var(--black);
-      font-family: var(--font-slab);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 2px;
-    }
-    .product-info {
-      padding: 16px 20px 20px;
+    .shirt-card:hover .shirt-card-image img { transform: scale(1.04); }
+
+    .shirt-card-body {
+      padding: 20px 20px 24px;
+      flex: 1;
       display: flex;
       flex-direction: column;
-      flex: 1;
     }
-    .product-series {
-      font-family: var(--font-body);
-      font-weight: 700;
+    .shirt-card-series {
+      font-family: 'Inter', sans-serif;
       font-size: 0.68rem;
-      letter-spacing: 0.2em;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gold);
       opacity: 0.7;
-      margin-bottom: 6px;
-    }
-    .product-name {
-      font-family: var(--font-slab);
-      font-size: 1rem;
-      color: var(--off-white);
-      line-height: 1.2;
       margin-bottom: 8px;
+      display: block;
     }
-    .product-desc {
-      font-size: 0.82rem;
+    .shirt-card-body h3 {
+      font-size: 1.05rem;
+      line-height: 1.3;
+      color: var(--off-white);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .shirt-card-body p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
       color: var(--text-body);
-      opacity: 0.6;
-      line-height: 1.5;
-      margin-bottom: 16px;
+      opacity: 0.5;
+      line-height: 1.55;
+      margin-bottom: 20px;
       flex: 1;
     }
-    .product-footer {
+    .shirt-card-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 12px;
-      border-top: 1px solid rgba(201,168,76,0.1);
+      gap: 12px;
     }
-    .product-price {
-      font-family: var(--font-slab);
-      font-size: 1.1rem;
-      color: var(--gold);
-    }
-    .btn-shop {
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .shirt-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
       color: var(--off-white);
       opacity: 0.8;
+    }
+    .btn-amazon {
+      display: inline-block;
+      background: var(--gold);
+      color: #0a0702;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       text-decoration: none;
-      transition: opacity 0.2s, color 0.2s;
+      padding: 10px 18px;
+      border-radius: 1px;
+      transition: background 0.2s, opacity 0.2s;
+      white-space: nowrap;
     }
-    .btn-shop:hover { opacity: 1; color: var(--gold); }
+    .btn-amazon:hover { background: #d4a233; }
 
-    /* COMING SOON */
-    .coming-soon-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+    /* COMING SOON CARD */
+    .shirt-card--soon {
+      border-style: dashed;
+      border-color: rgba(201,168,76,0.12);
     }
-    .coming-card {
-      background: var(--mid-grey);
-      border: 1px solid rgba(201,168,76,0.06);
-      border-radius: 2px;
-      padding: 28px 20px;
-      text-align: center;
+    .shirt-card--soon:hover {
+      transform: none;
+      border-color: rgba(201,168,76,0.18);
     }
-    .coming-card-icon { font-size: 2rem; opacity: 0.2; margin-bottom: 12px; display: block; }
-    .coming-card-series {
-      font-family: var(--font-body);
-      font-weight: 700;
+    .shirt-card--soon .shirt-card-image {
+      background: #111008;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .soon-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+    }
+    .soon-pint {
+      width: 48px;
+      height: 64px;
+      border: 2px solid rgba(201,168,76,0.2);
+      border-radius: 2px 2px 6px 6px;
+      position: relative;
+    }
+    .soon-pint::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      height: 10px;
+      background: rgba(201,168,76,0.12);
+      border-radius: 1px;
+    }
+    .soon-label {
+      font-family: 'Inter', sans-serif;
       font-size: 0.68rem;
-      letter-spacing: 0.2em;
+      font-weight: 500;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gold);
-      opacity: 0.5;
-      margin-bottom: 6px;
+      opacity: 0.35;
     }
-    .coming-card-name {
-      font-family: var(--font-slab);
-      font-size: 0.9rem;
+    .shirt-card--soon .shirt-card-body h3 {
       color: var(--off-white);
-      opacity: 0.5;
-      line-height: 1.3;
+      opacity: 0.35;
+    }
+    .shirt-card--soon .shirt-card-body p {
+      opacity: 0.25;
+    }
+    .soon-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.45;
+      padding: 6px 12px;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 1px;
+      display: inline-block;
     }
 
-    /* CTA */
-    .shop-cta {
-      background: var(--gold);
-      padding: 72px 24px;
+    /* STOREFRONT LINK */
+    .shop-storefront {
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding-top: 8px;
     }
-    .shop-cta::before {
-      content: '★';
-      position: absolute;
-      font-size: 30rem;
-      color: rgba(0,0,0,0.04);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      line-height: 1;
+    .shop-storefront a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--gold);
+      opacity: 0.7;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
     }
-    .shop-cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-    .shop-cta h2 {
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      color: var(--black);
-      margin-bottom: 16px;
-      line-height: 1.1;
-    }
-    .shop-cta p {
-      font-size: 1rem;
-      color: rgba(13,13,13,0.7);
-      margin-bottom: 32px;
-      line-height: 1.65;
-    }
+    .shop-storefront a:hover { opacity: 1; }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
-      .product-grid { grid-template-columns: repeat(2, 1fr); }
-      .coming-soon-grid { grid-template-columns: repeat(2, 1fr); }
-      .featured-grid { grid-template-columns: 1fr; gap: 32px; }
+      .shop-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 560px) {
-      .product-grid { grid-template-columns: 1fr; }
-      .coming-soon-grid { grid-template-columns: repeat(2, 1fr); }
-      .shop-section-header { flex-direction: column; gap: 8px; }
+    @media (max-width: 600px) {
+      .shop-grid { grid-template-columns: 1fr; }
     }
 
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav" id="mainNav">
     <a href="index.html" class="nav-logo">
       <img src="assets/logo.png" alt="Opinions on Tap" />
@@ -400,271 +303,145 @@
       <li><a href="the-tap/index.html">The Tap</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="shop.html" class="btn btn-primary">Shop</a>
+      <a href="the-tap/index.html" class="btn btn-primary">The Tap</a>
     </div>
     <button class="nav-toggle" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-
-  <!-- HERO -->
   <section class="shop-hero">
     <div class="shop-hero-inner">
-      <a href="index.html" class="shop-back">← Home</a>
-      <h1>The Pint of View<br>Collection.</h1>
-      <p>Premium pub life apparel. Every design features a real place or moment illustrated inside a pint glass. Printed on demand and shipped worldwide via Amazon.</p>
-      <div class="shop-amazon-note">
-        <span>★</span> All orders fulfilled by Amazon — trusted shipping, easy returns.
-      </div>
+      <p class="concept-label">The Collection</p>
+      <h1>Pint of <span>View.</span></h1>
+      <p>Every shirt is a scene through the glass. Printed on demand and shipped worldwide via Amazon.</p>
     </div>
   </section>
 
-
-  <!-- FEATURED DESIGN -->
-  <section class="featured-section">
-    <div class="featured-inner">
-      <span class="featured-label">Featured Design</span>
-      <div class="featured-grid">
-        <div class="featured-img-wrap">
-          <img src="assets/marlin-back.jfif" alt="Deep Sea Pint of View — Navy T-Shirt" />
-        </div>
-        <div>
-          <p class="featured-series">Fishing Series</p>
-          <h2 class="featured-title">Deep Sea Pint of View</h2>
-          <p class="featured-desc">The marlin breaks the surface inside the glass. Dark blue water, white spray, a single fish that fills the frame. This is the one serious fishermen recognise immediately.</p>
-          <p class="featured-sub">Premium navy tee. Back print design. OOT badge on the chest. Works as a gift or a self-purchase — the fishing dad who has everything hasn't seen this yet.</p>
-          <div class="featured-actions">
-            <a href="https://www.amazon.com/dp/B0GW375XQ8" target="_blank" rel="noopener" class="btn btn-primary">Buy on Amazon — $29.99</a>
-            <span class="featured-shipping">Free shipping on eligible orders</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- LIVE DESIGNS -->
   <section class="shop-section">
-    <div class="shop-section-inner">
-      <div class="shop-section-header">
-        <h2>Available Now</h2>
-        <span class="section-count">8 designs live</span>
-      </div>
+    <div class="shop-inner">
 
-      <div class="product-grid">
+      <span class="shop-label">Available Now</span>
 
-        <!-- Twelve Apostles -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/shirt-back.jfif" alt="The Pint of View — Twelve Apostles" />
+      <div class="shop-grid">
+
+        <!-- SHIRT 1: Deep Sea -->
+        <div class="shirt-card">
+          <div class="shirt-card-image">
+            <img src="assets/lifestyle-deepsea.jpg" alt="Deep Sea Pint of View shirt" />
           </div>
-          <div class="product-info">
-            <p class="product-series">Landmarks</p>
-            <h3 class="product-name">The Pint of View — Twelve Apostles</h3>
-            <p class="product-desc">The Great Ocean Road's most iconic stretch, illustrated inside the glass. Gunmetal grey premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GVDLPWSC" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+          <div class="shirt-card-body">
+            <span class="shirt-card-series">Fishing Series</span>
+            <h3>Deep Sea Pint of View</h3>
+            <p>Open water, blue marlin, the silence before the strike. For anyone who has stared at a horizon and felt it pull.</p>
+            <div class="shirt-card-footer">
+              <span class="shirt-price">$29.99</span>
+              <a href="https://www.amazon.com/dp/B0GW375XQ8" target="_blank" rel="noopener" class="btn-amazon">Buy on Amazon</a>
             </div>
           </div>
         </div>
 
-        <!-- Sydney Harbour -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/sydney-back.jfif" alt="The Pint of View — Sydney Harbour" />
+        <!-- SHIRT 2: Off Track -->
+        <div class="shirt-card">
+          <div class="shirt-card-image">
+            <img src="assets/lifestyle-offtrack.jpg" alt="Off Track Pint of View shirt" />
           </div>
-          <div class="product-info">
-            <p class="product-series">Landmarks</p>
-            <h3 class="product-name">The Pint of View — Sydney Harbour</h3>
-            <p class="product-desc">The Opera House and Harbour Bridge captured inside the glass. Gunmetal grey premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GVGS4TQM" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+          <div class="shirt-card-body">
+            <span class="shirt-card-series">Camping Series</span>
+            <h3>Off Track Pint of View</h3>
+            <p>Corrugations, red dust and a tent under the stars. The roads that don't show up on Google Maps.</p>
+            <div class="shirt-card-footer">
+              <span class="shirt-price">$29.99</span>
+              <a href="https://www.amazon.com/dp/B0GVVXX8N9" target="_blank" rel="noopener" class="btn-amazon">Buy on Amazon</a>
             </div>
           </div>
         </div>
 
-        <!-- Great Barrier Reef -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/reef-back.jfif" alt="The Pint of View — Great Barrier Reef" />
+        <!-- SHIRT 3: Grandad -->
+        <div class="shirt-card">
+          <div class="shirt-card-image">
+            <img src="assets/lifestyle-grandad.jpg" alt="This One's for Grandad shirt" />
           </div>
-          <div class="product-info">
-            <p class="product-series">Landmarks</p>
-            <h3 class="product-name">The Pint of View — Great Barrier Reef</h3>
-            <p class="product-desc">Australia's reef, seen through the glass. Vibrant colour illustration on gunmetal grey.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GVLD6694" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+          <div class="shirt-card-body">
+            <span class="shirt-card-series">Occasion Series</span>
+            <h3>This One's for Grandad</h3>
+            <p>A campfire pint for the man who earned it. The gift that says everything without trying too hard.</p>
+            <div class="shirt-card-footer">
+              <span class="shirt-price">$29.99</span>
+              <a href="https://www.amazon.com/dp/B0GW5N6RM4" target="_blank" rel="noopener" class="btn-amazon">Buy on Amazon</a>
             </div>
           </div>
         </div>
 
-        <!-- Fairway -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/fairway-back.jfif" alt="The Fairway Pint of View" />
+        <!-- COMING SOON 1 -->
+        <div class="shirt-card shirt-card--soon">
+          <div class="shirt-card-image">
+            <div class="soon-placeholder">
+              <div class="soon-pint"></div>
+              <span class="soon-label">Coming Soon</span>
+            </div>
           </div>
-          <div class="product-info">
-            <p class="product-series">Golf</p>
-            <h3 class="product-name">Fairway Pint of View</h3>
-            <p class="product-desc">For the golfer who appreciates the view as much as the round. Forest green premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GVQ39H5V" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+          <div class="shirt-card-body">
+            <span class="shirt-card-series">Fishing Series</span>
+            <h3>New Design</h3>
+            <p>Another view through the glass. Drop your email on the contact page to hear first.</p>
+            <div class="shirt-card-footer">
+              <span class="soon-tag">Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- Off Track -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/off-track-back.jfif" alt="The Off Track Pint of View" />
+        <!-- COMING SOON 2 -->
+        <div class="shirt-card shirt-card--soon">
+          <div class="shirt-card-image">
+            <div class="soon-placeholder">
+              <div class="soon-pint"></div>
+              <span class="soon-label">Coming Soon</span>
+            </div>
           </div>
-          <div class="product-info">
-            <p class="product-series">Camping</p>
-            <h3 class="product-name">Off Track</h3>
-            <p class="product-desc">For the ones who prefer the road less travelled. Olive premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GVVXX8N9" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+          <div class="shirt-card-body">
+            <span class="shirt-card-series">Golf Series</span>
+            <h3>New Design</h3>
+            <p>Another view through the glass. Drop your email on the contact page to hear first.</p>
+            <div class="shirt-card-footer">
+              <span class="soon-tag">Coming Soon</span>
             </div>
           </div>
         </div>
 
-        <!-- Deep Sea Marlin -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/marlin-back.jfif" alt="Deep Sea Pint of View" />
-          </div>
-          <div class="product-info">
-            <p class="product-series">Fishing</p>
-            <h3 class="product-name">Deep Sea Pint of View</h3>
-            <p class="product-desc">The one that got away — illustrated inside the glass. Navy premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GW375XQ8" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+        <!-- COMING SOON 3 -->
+        <div class="shirt-card shirt-card--soon">
+          <div class="shirt-card-image">
+            <div class="soon-placeholder">
+              <div class="soon-pint"></div>
+              <span class="soon-label">Coming Soon</span>
             </div>
           </div>
-        </div>
-
-        <!-- 21st Birthday -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/21st-back.jfif" alt="My First Pint of View 21st" />
-          </div>
-          <div class="product-info">
-            <p class="product-series">Occasion</p>
-            <h3 class="product-name">My First Pint of View — 21st</h3>
-            <p class="product-desc">For the birthday they actually remember. White premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GVYZGTYJ" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- This One's For Granddad -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <span class="product-badge">Live</span>
-            <img src="assets/granddad.jfif" alt="This One's For Granddad" />
-          </div>
-          <div class="product-info">
-            <p class="product-series">Occasion</p>
-            <h3 class="product-name">This One's For Granddad</h3>
-            <p class="product-desc">The campfire. The stories. The man who made the memories. Navy premium tee.</p>
-            <div class="product-footer">
-              <span class="product-price">$29.99</span>
-              <a href="https://www.amazon.com/dp/B0GW5N6RM4" target="_blank" rel="noopener" class="btn-shop">Buy on Amazon →</a>
+          <div class="shirt-card-body">
+            <span class="shirt-card-series">Occasion Series</span>
+            <h3>New Design</h3>
+            <p>Another view through the glass. Drop your email on the contact page to hear first.</p>
+            <div class="shirt-card-footer">
+              <span class="soon-tag">Coming Soon</span>
             </div>
           </div>
         </div>
 
       </div>
+
+      <div class="shop-storefront">
+        <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3APint%2Bof%2BView%2Bby%2BOpinions%2Bon%2BTap" target="_blank" rel="noopener">View full collection on Amazon</a>
+      </div>
+
     </div>
   </section>
 
-
-  <!-- COMING SOON -->
-  <section class="shop-section">
-    <div class="shop-section-inner">
-      <div class="shop-section-header">
-        <h2>Coming Soon</h2>
-        <span class="section-count">New designs dropping weekly</span>
-      </div>
-      <div class="coming-soon-grid">
-        <div class="coming-card">
-          <span class="coming-card-icon">⛳</span>
-          <p class="coming-card-series">Golf</p>
-          <p class="coming-card-name">The Real Pint of Golf</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">⛳</span>
-          <p class="coming-card-series">Golf</p>
-          <p class="coming-card-name">The 19th Pint of View</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">🎣</span>
-          <p class="coming-card-series">Fishing</p>
-          <p class="coming-card-name">The Tinnie Pint of View</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">🎣</span>
-          <p class="coming-card-series">Fishing</p>
-          <p class="coming-card-name">The Jetty Pint of View</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">🏔️</span>
-          <p class="coming-card-series">Camping</p>
-          <p class="coming-card-name">Last Light</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">🏔️</span>
-          <p class="coming-card-series">Camping</p>
-          <p class="coming-card-name">Summit</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">🎁</span>
-          <p class="coming-card-series">Occasion</p>
-          <p class="coming-card-name">Dad Pint of View</p>
-        </div>
-        <div class="coming-card">
-          <span class="coming-card-icon">🎁</span>
-          <p class="coming-card-series">Occasion</p>
-          <p class="coming-card-name">Retire Pint of View</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CTA -->
-  <section class="shop-cta">
-    <div class="shop-cta-inner">
-      <h2>A good gift is something they recognise.</h2>
-      <p>For the golfer, the traveller, the fisherman, the dad. All shipped worldwide via Amazon.</p>
-      <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3APint%2Bof%2BView%2Bby%2BOpinions%2Bon%2BTap" target="_blank" rel="noopener" class="btn btn-dark">View Full Store on Amazon</a>
-    </div>
-  </section>
-
-
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
         <p class="footer-tagline">It's My Pint of View</p>
-        <p class="footer-desc">Pub life gear for people with opinions. Designed in Australia. Shipped worldwide via Amazon.</p>
+        <p class="footer-desc">Travel, outdoor life and dry perspective, seen through the pint lens. Designed in Australia. Shipped worldwide via Amazon.</p>
       </div>
       <nav class="footer-nav">
         <h4>Navigate</h4>
@@ -679,7 +456,7 @@
       <div class="footer-social">
         <h4>Follow Along</h4>
         <div class="social-links">
-          <a href="https://www.instagram.com/opinions.on.tap/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.instagram.com/opinionsontapofficial/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
           <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
         </div>
       </div>
