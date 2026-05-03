@@ -3,36 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Story — Pub Life Brand | Opinions on Tap</title>
-  <meta name="description" content="Opinions on Tap is a pub life brand built around one idea — the pint glass as a lens on the world. Every great opinion starts with a good view." />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://opinionsontap.com/our-story.html" />
-  <meta property="og:title" content="Our Story — Opinions on Tap" />
-  <meta property="og:description" content="The pint glass is our way of framing it. Every design puts a real place or moment inside a pint glass." />
-  <meta property="og:image" content="https://opinionsontap.com/assets/12a-shot.jpg" />
-  <meta property="og:site_name" content="Opinions on Tap" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Our Story — Opinions on Tap" />
-  <meta name="twitter:description" content="Opinions on Tap is a pub life brand built around one idea — the pint glass as a lens on the world." />
-  <meta name="twitter:image" content="https://opinionsontap.com/assets/12a-shot.jpg" />
-  <link rel="canonical" href="https://opinionsontap.com/our-story.html" />
+  <title>Our Story — Opinions on Tap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ============================
-       OUR STORY — PAGE STYLES
-       ============================ */
 
-    /* Hero */
     .story-hero {
-      min-height: 60vh;
+      min-height: 65vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
       background: var(--black);
     }
-
     .story-hero::after {
       content: '';
       position: absolute;
@@ -42,52 +27,43 @@
       background-position: center 30%;
       z-index: 0;
     }
-
     .story-hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to right,
-        rgba(10, 7, 2, 0.78) 0%,
-        rgba(10, 7, 2, 0.68) 50%,
-        rgba(10, 7, 2, 0.40) 100%
-      );
+      background: linear-gradient(to right, rgba(10,7,2,0.88) 0%, rgba(10,7,2,0.65) 55%, rgba(10,7,2,0.35) 100%);
       z-index: 1;
       pointer-events: none;
     }
-
     .story-hero-inner {
       position: relative;
       z-index: 2;
-      max-width: var(--max-width);
+      max-width: 820px;
       margin: 0 auto;
       padding: 160px 24px 100px;
-      max-width: 780px;
     }
-
     .story-hero-inner h1 {
-      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
       line-height: 1.05;
       margin-bottom: 28px;
       color: var(--off-white);
     }
-
     .story-hero-inner .explainer {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-body);
-      opacity: 0.8;
-      line-height: 1.7;
-      max-width: 580px;
+      opacity: 0.78;
+      line-height: 1.75;
+      max-width: 560px;
     }
 
-    /* The Idea section */
+    /* The Idea */
     .story-idea {
       background: var(--warm-dark);
       padding: var(--section-pad);
       position: relative;
     }
-
     .story-idea::before {
       content: '';
       position: absolute;
@@ -95,36 +71,27 @@
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23C9A84C' opacity='0.05'/%3E%3C/svg%3E");
       pointer-events: none;
     }
-
     .story-idea-inner {
       position: relative;
       z-index: 1;
       max-width: 720px;
       margin: 0 auto;
     }
-
-    .story-idea-inner .concept-label {
-      margin-bottom: 32px;
-    }
-
+    .story-idea-inner .concept-label { margin-bottom: 32px; }
     .story-body {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       line-height: 1.9;
       color: var(--text-body);
     }
-
-    .story-body p {
-      opacity: 0.85;
-    }
-
-    .story-body p + p {
-      margin-top: 28px;
-    }
-
+    .story-body p { opacity: 0.82; }
+    .story-body p + p { margin-top: 28px; }
     .story-body .highlight {
       color: var(--off-white);
       opacity: 1;
+      font-family: 'Playfair Display', Georgia, serif;
       font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.7;
     }
 
     /* Photo break */
@@ -135,28 +102,19 @@
       position: relative;
       overflow: hidden;
     }
-
     .story-photo-break img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 35%;
+      object-position: center 75%;
       display: block;
     }
-
     .story-photo-break::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(10,7,2,0.4) 0%,
-        rgba(10,7,2,0.1) 40%,
-        rgba(10,7,2,0.1) 60%,
-        rgba(10,7,2,0.5) 100%
-      );
+      background: linear-gradient(to bottom, rgba(10,7,2,0.35) 0%, rgba(10,7,2,0.05) 40%, rgba(10,7,2,0.05) 60%, rgba(10,7,2,0.55) 100%);
     }
-
     .story-photo-caption {
       position: absolute;
       bottom: 32px;
@@ -170,21 +128,57 @@
       text-shadow: 0 2px 12px rgba(0,0,0,0.6);
     }
 
-    /* The Series section */
-    .story-series {
+    /* Content engine section */
+    .story-content-engine {
       background: var(--black);
       padding: var(--section-pad);
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+    .story-engine-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .story-engine-inner .concept-label { margin-bottom: 32px; }
+    .story-engine-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .story-engine-pillar {
+      background: var(--warm-dark);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 2px;
+      padding: 24px 22px;
+    }
+    .story-engine-pillar h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+    .story-engine-pillar p {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      opacity: 0.6;
+      line-height: 1.6;
     }
 
+    /* The series */
+    .story-series {
+      background: var(--warm-dark);
+      padding: var(--section-pad);
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
     .story-series-inner {
       max-width: 720px;
       margin: 0 auto;
     }
-
-    .story-series-inner .concept-label {
-      margin-bottom: 32px;
-    }
-
+    .story-series-inner .concept-label { margin-bottom: 32px; }
     .series-closer {
       margin-top: 40px;
       padding-top: 40px;
@@ -193,27 +187,46 @@
       flex-direction: column;
       gap: 6px;
     }
-
     .series-closer span {
-      font-family: var(--font-slab);
-      font-size: 1.1rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.15rem;
       color: var(--gold);
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
-    /* CTA section */
+    /* CTA */
     .story-cta {
-      background: var(--warm-dark);
+      background: var(--black);
       padding: 100px 24px;
       text-align: center;
       border-top: 1px solid rgba(201,168,76,0.12);
     }
-
     .story-cta h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      margin-bottom: 32px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 500;
+      margin-bottom: 16px;
       color: var(--off-white);
     }
+    .story-cta p {
+      font-size: 1rem;
+      color: var(--text-body);
+      opacity: 0.6;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .story-cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      .story-engine-pillars { grid-template-columns: 1fr; }
+    }
+
   </style>
 </head>
 <body>
@@ -232,24 +245,22 @@
       <li><a href="the-tap/index.html">The Tap</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="shop.html" class="btn btn-primary">Shop</a>
+      <a href="the-tap/index.html" class="btn btn-primary">The Tap</a>
     </div>
     <button class="nav-toggle" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-
   <!-- HERO -->
   <section class="story-hero">
     <div class="story-hero-inner">
-      <h1 class="fade-up">Every great opinion starts with a good view.</h1>
-      <p class="explainer fade-up delay-2">
-        Opinions on Tap is a pub life brand built around one idea — the pint glass as a lens on the world.
+      <h1>The best views are earned.</h1>
+      <p class="explainer">
+        Opinions on Tap is a content-led lifestyle brand built around travel, outdoor life and the perspective you pick up along the way. The pint is the lens. The journey is the story.
       </p>
     </div>
   </section>
-
 
   <!-- THE IDEA -->
   <section class="story-idea">
@@ -257,39 +268,70 @@
       <p class="concept-label">The Idea</p>
       <div class="story-body">
         <p>
-          There's something about a pub that makes people honest.
+          It started with a simple observation. The best conversations happen when people have been somewhere, done something, and have an opinion about it.
         </p>
         <p>
-          Not the alcohol — the atmosphere. The fact that everyone's sitting down, no one's in a hurry, and the conversation has room to go somewhere.
-        </p>
-        <p>
-          That's what Opinions on Tap is about. The pint glass is our way of framing it. When you're holding one, you're not rushing. You're looking around. You've got a point of view.
+          Not the polished version. The honest one. The one that comes out after you have been on the road for three days, or stood on a reef for the first time in thirty years, or played the worst round of your life and still cannot wait to go back.
         </p>
         <p class="highlight">
-          We took that idea literally. Every design puts a real place or moment inside a pint glass. A coastline. A course. A view worth stopping for. Because the best views and the best opinions tend to show up at the same time.
+          The pint glass is not the subject. It is the lens. The way you frame what you saw and what you reckon about it.
+        </p>
+        <p>
+          We took that literally. Every design puts a real place or moment inside a pint glass. A coastline. A course. A horizon worth stopping for. Because the best views and the most honest opinions tend to show up at the same time.
         </p>
       </div>
     </div>
   </section>
 
-
   <!-- PHOTO BREAK -->
   <div class="story-photo-break">
-    <img src="assets/12a-shot.jpg" alt="The Twelve Apostles, Great Ocean Road" />
-    <span class="story-photo-caption">The Twelve Apostles — Design 01</span>
+    <img src="assets/overland-bg.jpg" alt="The Twelve Apostles, Great Ocean Road" />
+    <span class="story-photo-caption">Off the sealed road — The Pursuit</span>
   </div>
 
+  <!-- CONTENT ENGINE -->
+  <section class="story-content-engine">
+    <div class="story-engine-inner">
+      <p class="concept-label">How We Tell It</p>
+      <div class="story-body">
+        <p>
+          Content is the engine. The shirts are downstream of the stories, not the other way around.
+        </p>
+        <p>
+          The Tap is the blog. Roads, reefs, fairways and the cold one after. Written the way you would tell it to a mate. The views come from both sides of the lens — Mark from the water and the desert, Adam from the overland tracks, the dog sleds and the Norwegian winter.
+        </p>
+      </div>
+      <div class="story-engine-pillars">
+        <div class="story-engine-pillar">
+          <h4>The View</h4>
+          <p>Landscape, ocean, wilderness. The scroll-stopping shot that earns the click.</p>
+        </div>
+        <div class="story-engine-pillar">
+          <h4>The Pursuit</h4>
+          <p>Surf, fishing, diving, 4WD, overland. The activity itself. Not the gear.</p>
+        </div>
+        <div class="story-engine-pillar">
+          <h4>The Opinion</h4>
+          <p>Short. Dry. Confident. The pub take on travel, sport and outdoor life.</p>
+        </div>
+        <div class="story-engine-pillar">
+          <h4>The Culture</h4>
+          <p>The cold one after. Post-session ritual. The brand glue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- THE SERIES -->
   <section class="story-series">
     <div class="story-series-inner">
-      <p class="concept-label">The Series</p>
+      <p class="concept-label">The Shirts</p>
       <div class="story-body">
         <p>
-          The Pint of View series starts in Australia.
+          The Pint of View series starts in Australia and goes wherever the stories do.
         </p>
         <p>
-          Each shirt captures something worth raising a glass to — real locations, great courses, iconic coastlines, places and moments that mean something to the people who've been there.
+          Each design captures something worth raising a glass to — real places, real pursuits, moments that mean something to the people who have been there. Landmarks, golf, fishing, camping, surf, occasion. The series grows as the catalogue does.
         </p>
       </div>
       <div class="series-closer">
@@ -300,13 +342,15 @@
     </div>
   </section>
 
-
   <!-- CTA -->
   <section class="story-cta">
     <h2>Find your view.</h2>
-    <a href="shop.html" class="btn btn-primary">Shop the Collection</a>
+    <p>The places you have been. The pursuits you keep coming back to. There is a shirt for that.</p>
+    <div class="story-cta-actions">
+      <a href="the-tap/index.html" class="btn btn-primary">Read The Tap</a>
+      <a href="shop.html" class="btn btn-outline">Shop the Collection</a>
+    </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -314,7 +358,7 @@
       <div class="footer-brand">
         <img src="assets/logo.png" alt="Opinions on Tap" class="footer-logo" />
         <p class="footer-tagline">It's My Pint of View</p>
-        <p class="footer-desc">Pub life gear for people with opinions. Designed in Australia. Shipped worldwide via Amazon.</p>
+        <p class="footer-desc">Travel, outdoor life and dry perspective, seen through the pint lens. Designed in Australia. Shipped worldwide via Amazon.</p>
       </div>
       <nav class="footer-nav">
         <h4>Navigate</h4>
@@ -323,19 +367,19 @@
           <li><a href="our-story.html">Our Story</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="contact.html">Contact</a></li>
-      <li><a href="the-tap/index.html">The Tap</a></li>
+          <li><a href="the-tap/index.html">The Tap</a></li>
         </ul>
       </nav>
       <div class="footer-social">
         <h4>Follow Along</h4>
         <div class="social-links">
-          <a href="https://www.instagram.com/opinions.on.tap/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.instagram.com/opinionsontapofficial/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
           <a href="https://www.facebook.com/profile.php?id=61575730448745" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Opinions on Tap. All rights reserved.</span>
+      <span>© 2026 Opinions on Tap. All rights reserved.</span>
       <span>opinionsontap.com</span>
     </div>
   </footer>
