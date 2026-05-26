@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opinions on Tap — Travel, Outdoor Life & Pint of View Apparel</title>
-  <meta name="description" content="Opinions on Tap is a travel and outdoor lifestyle brand built around the pint glass as a lens on the world. Stories, views and apparel for golfers, fishers, surfers and overland travellers." />
+  <title>Opinions on Tap — The things you only notice when you've done it enough times</title>
+  <meta name="description" content="Roads. Reefs. Boat ramps. Campfires. Pub tables. Stories from people who stayed long enough to notice." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://opinionsontap.com/" />
-  <meta property="og:title" content="Opinions on Tap — Travel, Outdoor Life & Pint of View Apparel" />
-  <meta property="og:description" content="Opinions on Tap is a travel and outdoor lifestyle brand built around the pint glass as a lens on the world. Stories, views and apparel for golfers, fishers, surfers and overland travellers." />
+  <meta property="og:title" content="Opinions on Tap — The things you only notice when you've been there long enough" />
+  <meta property="og:description" content="Roads. Reefs. Boat ramps. Campfires. Pub tables. Stories from people who stayed long enough to notice." />
   <meta property="og:image" content="https://opinionsontap.com/assets/pub-card.jpg" />
   <meta property="og:site_name" content="Opinions on Tap" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Opinions on Tap — Travel, Outdoor Life & Pint of View Apparel" />
-  <meta name="twitter:description" content="Travel and outdoor lifestyle stories and apparel. The pint is the lens. The journey is the story." />
+  <meta name="twitter:title" content="Opinions on Tap — The things you only notice when you've been there long enough" />
+  <meta name="twitter:description" content="Roads. Reefs. Boat ramps. Campfires. Pub tables. Stories from people who stayed long enough to notice." />
   <meta name="twitter:image" content="https://opinionsontap.com/assets/pub-card.jpg" />
   <link rel="canonical" href="https://opinionsontap.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,15 +66,7 @@
       line-height: 1.2 !important;
     }
 
-    /* Nav -- de-emphasise Shop, surface The Tap */
-    .nav-links li:nth-child(3) a {
-      opacity: 0.45 !important;
-      font-size: 0.72rem !important;
-    }
-    .nav-links li:nth-child(5) a {
-      color: var(--gold) !important;
-      opacity: 0.9 !important;
-    }
+    /* Nav links consistent sizing */
 
     /* Content strip -- new section between concept and designs */
     .content-strip {
@@ -271,7 +263,7 @@
   "name": "Opinions on Tap",
   "url": "https://opinionsontap.com",
   "logo": "https://opinionsontap.com/assets/logo.png",
-  "description": "Opinions on Tap is a travel and outdoor lifestyle brand built around the pint glass as a lens on the world. Stories, views and apparel for golfers, fishers, surfers and overland travellers.",
+  "description": "Honest stories from the road, the water, the track and the reef. OOT is the perspective you pick up when you have actually done the thing. Stories told the way you would tell them to a mate.",
   "sameAs": [
     "https://www.instagram.com/opinionsontapofficial/",
     "https://www.facebook.com/profile.php?id=61575730448745"
@@ -303,82 +295,133 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" style="position: relative;">
     <div class="hero-inner">
       <div class="hero-text">
-        <h1 class="hero-headline fade-up">Life through the lens<br>of a pint glass.</h1>
+        <h1 class="hero-headline fade-up">Most people see the view.<br><span style="color: var(--gold);">A few notice what's happening inside it.</span></h1>
         <p class="hero-sub fade-up delay-2">
-          Roads, coasts, courses and cold ones. Travel, outdoor life and dry perspective — worn on a shirt, told in a story.
+          Roads. Reefs. Boat ramps. Campfires. Pub tables.<br>The places where people quietly give themselves away.
         </p>
-        <p class="hero-gift fade-up delay-3">The pint is the lens. The journey is the story.</p>
+        <p class="hero-gift fade-up delay-3">Pull up a stool.</p>
         <div class="hero-actions fade-up delay-3">
-          <a href="our-story.html" class="btn btn-primary">Our Story</a>
-          <a href="the-tap/index.html" class="btn btn-outline">Read The Tap</a>
+          <a href="the-tap/index.html" class="btn btn-primary">Read The Tap</a>
+          <a href="our-story.html" class="btn btn-outline">Our Story</a>
         </div>
       </div>
-      <div class="hero-image-wrap fade-up delay-2">
-        <img src="assets/logo.png" alt="Opinions on Tap badge" class="hero-logo" />
+    </div>
+    <img src="assets/logo.png" alt="Opinions on Tap" style="
+      position: absolute;
+      bottom: 32px;
+      right: 32px;
+      width: 182px;
+      height: 182px;
+      object-fit: contain;
+      opacity: 0.35;
+      z-index: 10;
+    " />
+  </section>
+
+  <!-- OBSERVATIONS — first thing after nav, before marquee -->
+  <section class="concept section" style="padding-top: 0; padding-bottom: 0; background: var(--black);">
+    <div style="max-width: 100%; margin: 0;">
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;" class="obs-grid">
+
+        <div class="obs-card">
+          <div class="obs-img-wrap">
+            <img src="assets/obs-camping-sign.jpg" alt="" loading="lazy" />
+          </div>
+          <p class="obs-caption">"I reserved that site."</p>
+        </div>
+
+        <div class="obs-card">
+          <div class="obs-img-wrap">
+            <img src="assets/obs-airdown.jpg" alt="" loading="lazy" />
+          </div>
+          <p class="obs-caption">"Running a pretty basic setup."</p>
+        </div>
+
+        <div class="obs-card">
+          <div class="obs-img-wrap">
+            <img src="assets/obs-frogmouth.jpg" alt="" loading="lazy" />
+          </div>
+          <p class="obs-caption">"Easy to miss if you're moving too fast."</p>
+        </div>
+
       </div>
+
     </div>
   </section>
+
+  <style>
+    .obs-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--warm-dark);
+    }
+    .obs-img-wrap {
+      width: 100%;
+      aspect-ratio: 3/2;
+      overflow: hidden;
+      background: #0a0702;
+    }
+    .obs-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+      filter: brightness(0.92) contrast(1.04);
+    }
+    .obs-card:hover .obs-img-wrap img {
+      transform: scale(1.03);
+    }
+    .obs-caption {
+      padding: 18px 22px 20px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--off-white);
+      opacity: 0.92;
+      line-height: 1.5;
+      background: var(--warm-dark);
+      border-top: 1px solid rgba(201,168,76,0.2);
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 768px) {
+      .obs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1px !important;
+      }
+    }
+  </style>
 
   <!-- MARQUEE -->
   <div class="marquee-strip" aria-hidden="true">
     <div class="marquee-track">
-      <span class="marquee-item">The Pint is the Lens <span>★</span></span>
-      <span class="marquee-item">Roads. Coasts. Courses. Cold Pints. <span>★</span></span>
+      <span class="marquee-item">I Was There <span>★</span></span>
+      <span class="marquee-item">This Is What I Saw <span>★</span></span>
       <span class="marquee-item">It's My Pint of View <span>★</span></span>
-      <span class="marquee-item">The Journey is the Story <span>★</span></span>
-      <span class="marquee-item">Opinions on Tap <span>★</span></span>
       <span class="marquee-item">Earn the View <span>★</span></span>
-      <span class="marquee-item">The Pint is the Lens <span>★</span></span>
-      <span class="marquee-item">Roads. Coasts. Courses. Cold Pints. <span>★</span></span>
+      <span class="marquee-item">Opinions on Tap <span>★</span></span>
+      <span class="marquee-item">Tell It Straight <span>★</span></span>
+      <span class="marquee-item">I Was There <span>★</span></span>
+      <span class="marquee-item">This Is What I Saw <span>★</span></span>
       <span class="marquee-item">It's My Pint of View <span>★</span></span>
-      <span class="marquee-item">The Journey is the Story <span>★</span></span>
-      <span class="marquee-item">Opinions on Tap <span>★</span></span>
       <span class="marquee-item">Earn the View <span>★</span></span>
+      <span class="marquee-item">Opinions on Tap <span>★</span></span>
+      <span class="marquee-item">Tell It Straight <span>★</span></span>
     </div>
   </div>
-
-  <!-- CONCEPT -->
-  <section class="concept section">
-    <div class="container concept-inner">
-      <div class="concept-text">
-        <p class="concept-label">The Idea</p>
-        <h2 class="concept-heading">
-          The pint is the lens.<br><span class="gold">The journey is the story.</span>
-        </h2>
-        <div class="concept-body">
-          <p>
-            Not a beer brand. Not pub merch.
-          </p>
-          <p>
-            Opinions on Tap is built around travel, outdoor life and earned views. The pint glass is the lens — the way you frame what you saw, what you did and what you reckon about it. Sometimes it is literally in the shot. Sometimes it is just how the story gets told.
-          </p>
-          <p>
-            Road trips. Reefs. Fairways. Cold ones at the end of something worth doing. That is the brand.
-          </p>
-        </div>
-        <div class="divider"><span class="divider-star">★</span></div>
-        <a href="our-story.html" class="btn btn-outline" style="margin-top: 8px;">Read the Full Story</a>
-      </div>
-      <div class="concept-visual">
-        <div class="concept-badge-wrap">
-          <img src="assets/logo.png" alt="Opinions on Tap badge" class="concept-badge" />
-        </div>
-        <p class="concept-quote">It's My Pint of View</p>
-      </div>
-    </div>
-  </section>
 
   <!-- CONTENT STRIP — The Tap -->
   <section class="content-strip">
     <div class="content-strip-inner">
       <div class="content-strip-text">
         <p class="concept-label">The Tap</p>
-        <h2>Honest stories from trips worth taking.</h2>
-        <p>Not travel journalism. Not a highlights reel. The Tap is written from the perspective of someone who was there, did the thing, and has something honest to say about it.</p>
-        <p>Road trips, reefs, fairways, ancient stones and the cold one after. Pull up a stool.</p>
+        <h2>Stories from people who stayed long enough to notice.</h2>
+        <p>Not travel journalism. Not a highlight reel. The Tap is the version you tell later, once the dust has settled and everyone has agreed what definitely did not happen.</p>
+        <p>Pull up a stool.</p>
         <div class="content-strip-links">
           <a href="the-tap/index.html" class="btn btn-primary">Read The Tap</a>
           <a href="our-story.html" class="btn btn-outline">Our Story</a>
@@ -410,13 +453,24 @@
     </div>
   </section>
 
+  <!-- QUIET PHILOSOPHY -->
+  <section style="background: var(--black); padding: 80px 24px; border-top: 1px solid rgba(201,168,76,0.08);">
+    <div style="max-width: 560px; margin: 0 auto; text-align: center;">
+      <p style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.1rem, 2vw, 1.3rem); font-style: italic; color: var(--text-body); opacity: 0.65; line-height: 1.9; margin: 0;">
+        The pint glass is not the subject. It is the pause.<br>
+        The moment after something worth doing, when you stop moving and form an opinion about what just happened.
+      </p>
+      <span style="color: var(--gold); opacity: 0.7; font-style: normal; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-top: 28px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700;">It's My Pint of View</span>
+    </div>
+  </section>
+
   <!-- DESIGNS -->
   <section class="designs section">
     <div class="container">
       <div class="designs-header">
         <p class="concept-label">The Shirts</p>
         <h2>The pursuit. On a shirt.</h2>
-        <p>Three designs. Each one built around a real place, a real pursuit, or a moment worth marking.</p>
+        <p>Each design puts a real place or a real pursuit inside a pint glass. The glass is the lens. The scene inside it is the view.</p>
       </div>
 
       <div class="pov-three-grid">
@@ -428,7 +482,7 @@
           <div class="pov-card-body">
             <p class="pov-card-label">Fishing</p>
             <h3 class="pov-card-title">Deep Sea Pint of View</h3>
-            <p class="pov-card-desc">Early mornings. Cold water. The last cast that wasn't. For the fisherman who knows exactly what that means.</p>
+            <p class="pov-card-desc">Before the sun. Before anyone else. The last cast that was never actually the last one. For the fisherman who knows exactly what that means.</p>
             <a href="https://www.amazon.com/dp/B0GW375XQ8" target="_blank" rel="noopener" class="pov-card-link">Shop on Amazon →</a>
           </div>
         </div>
@@ -440,7 +494,7 @@
           <div class="pov-card-body">
             <p class="pov-card-label">Overland</p>
             <h3 class="pov-card-title">Off Track Pint of View</h3>
-            <p class="pov-card-desc">Off the sealed road. Where the track gets rough and the views get honest. For the ones who know the way back.</p>
+            <p class="pov-card-desc">Past the last sealed road. Where the track gets worse and the views get honest. For the ones who packed too much and went anyway.</p>
             <a href="https://www.amazon.com/dp/B0GVVXX8N9" target="_blank" rel="noopener" class="pov-card-link">Shop on Amazon →</a>
           </div>
         </div>
@@ -452,7 +506,7 @@
           <div class="pov-card-body">
             <p class="pov-card-label">Occasion</p>
             <h3 class="pov-card-title">This One's for Grandad</h3>
-            <p class="pov-card-desc">For the man who has been everywhere, seen everything and still shows up. The gift that actually lands.</p>
+            <p class="pov-card-desc">For the man who has been everywhere, seen everything, and still shows up. He has earned more views than most. The gift that actually lands.</p>
             <a href="https://www.amazon.com/dp/B0GW5N6RM4" target="_blank" rel="noopener" class="pov-card-link">Shop on Amazon →</a>
           </div>
         </div>
@@ -460,7 +514,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 56px;">
-        <p style="font-size: 0.88rem; color: var(--text-body); opacity: 0.45; margin-bottom: 16px; letter-spacing: 0.04em;">More designs available on Amazon</p>
+        <p style="font-size: 0.88rem; color: var(--text-body); opacity: 0.45; margin-bottom: 16px; letter-spacing: 0.04em;">More pursuits in the collection</p>
         <a href="https://www.amazon.com/s?rh=n%3A7141123011%2Cp_4%3APint%2Bof%2BView%2Bby%2BOpinions%2Bon%2BTap" target="_blank" rel="noopener" class="btn btn-outline">View Full Collection on Amazon</a>
       </div>
     </div>
@@ -470,7 +524,7 @@
   <section class="pov-strip">
     <div class="pov-strip-inner">
       <h2>What's your pint of view?</h2>
-      <p>The places you have been. The pursuits you keep coming back to. There is a shirt for that.</p>
+      <p>The places you have been. The pursuits you keep going back to. The views you earned. There is a shirt for that.</p>
       <a href="shop.html" class="btn btn-dark">Shop on Amazon</a>
     </div>
   </section>
@@ -481,7 +535,7 @@
       <div class="footer-brand">
         <img src="assets/logo.png" alt="Opinions on Tap — travel and outdoor lifestyle brand" class="footer-logo" />
         <p class="footer-tagline">It's My Pint of View</p>
-        <p class="footer-desc footer-desc-new">Travel, outdoor life and dry perspective, seen through the pint lens. Designed in Australia. Shipped worldwide via Amazon.</p>
+        <p class="footer-desc footer-desc-new">Stories from the road, the water, the track and the reef. Told straight. The pint is the lens. Designed in Australia. Shipped worldwide via Amazon.</p>
       </div>
       <nav class="footer-nav">
         <h4>Navigate</h4>
